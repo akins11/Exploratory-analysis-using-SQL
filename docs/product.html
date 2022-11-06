@@ -1,0 +1,4417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.149">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2. Product Summary</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./customer.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">2. Product Summary</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Sales Exploratory Analysis</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">1. Exploring Business Sales Period</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./product.html" class="sidebar-item-text sidebar-link active">2. Product Summary</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./customer.html" class="sidebar-item-text sidebar-link">3. Transaction Summary Of Customers</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sales_channel.html" class="sidebar-item-text sidebar-link">4. Method Of Product Sales</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./location.html" class="sidebar-item-text sidebar-link">5. Geo-location Summary</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">2. Product Summary</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<section id="first-let-us-get-all-the-unique-products-sold-during-the-selected-period." class="level3">
+<h3 class="anchored" data-anchor-id="first-let-us-get-all-the-unique-products-sold-during-the-selected-period.">First let us get all the unique products sold during the selected period.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, <span class="fu">count</span>(product_name) <span class="kw">AS</span> <span class="fu">Count</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> product</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> sales_order</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> product.product_id <span class="op">=</span> sales_order.product_id</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">Count</span> <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="rgjgvcgqwh" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#rgjgvcgqwh) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#rgjgvcgqwh) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#rgjgvcgqwh) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#rgjgvcgqwh) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#rgjgvcgqwh) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#rgjgvcgqwh) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#rgjgvcgqwh) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#rgjgvcgqwh) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#rgjgvcgqwh) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#rgjgvcgqwh) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#rgjgvcgqwh) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#rgjgvcgqwh) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_left {
+  text-align: left;
+}
+
+:where(#rgjgvcgqwh) .gt_center {
+  text-align: center;
+}
+
+:where(#rgjgvcgqwh) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#rgjgvcgqwh) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#rgjgvcgqwh) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#rgjgvcgqwh) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#rgjgvcgqwh) .gt_super {
+  font-size: 65%;
+}
+
+:where(#rgjgvcgqwh) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#rgjgvcgqwh) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#rgjgvcgqwh) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#rgjgvcgqwh) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#rgjgvcgqwh) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#rgjgvcgqwh) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#rgjgvcgqwh) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Count</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">Serveware</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">200</td></tr>
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">Platters</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">200</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_center">195</td></tr>
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_center">194</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_center">190</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_center">184</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_center">183</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_center">182</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_center">182</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_center">181</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_center">180</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_center">179</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_center">178</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_center">178</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_center">177</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_center">176</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_center">175</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_center">173</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_center">173</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_center">172</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_center">172</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_center">170</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_center">170</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_center">170</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_center">169</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_center">168</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_center">168</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_center">168</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_center">168</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_center">166</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_center">166</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_center">165</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_center">164</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_center">164</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_center">163</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_center">163</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_center">162</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_center">158</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_center">157</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_center">154</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_center">147</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_center">145</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_center">126</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>There are 47 unique products sold from the above table and <code>Serveware &amp; platters</code> have the highest number of unique transactions involved in, while the <code>pillows</code> product have the fewest.</p>
+</section>
+<section id="following-the-number-of-times-each-product-was-sold-what-are-the-top-3-products" class="level3">
+<h3 class="anchored" data-anchor-id="following-the-number-of-times-each-product-was-sold-what-are-the-top-3-products">Following the number of times each product was sold, what are the top 3 products</h3>
+<p>based on the number of order placed for them by customers?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, <span class="fu">SUM</span>(order_quantity) <span class="kw">AS</span> Total_Order</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> sales_order</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> sales_order.product_id <span class="op">=</span> product.product_id</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Order <span class="kw">DESC</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LIMIT</span> <span class="dv">3</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="abaihhemha" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#abaihhemha) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#abaihhemha) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#abaihhemha) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#abaihhemha) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#abaihhemha) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#abaihhemha) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#abaihhemha) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#abaihhemha) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#abaihhemha) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#abaihhemha) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#abaihhemha) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#abaihhemha) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#abaihhemha) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#abaihhemha) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#abaihhemha) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#abaihhemha) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#abaihhemha) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#abaihhemha) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#abaihhemha) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#abaihhemha) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#abaihhemha) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#abaihhemha) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#abaihhemha) .gt_left {
+  text-align: left;
+}
+
+:where(#abaihhemha) .gt_center {
+  text-align: center;
+}
+
+:where(#abaihhemha) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#abaihhemha) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#abaihhemha) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#abaihhemha) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#abaihhemha) .gt_super {
+  font-size: 65%;
+}
+
+:where(#abaihhemha) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#abaihhemha) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#abaihhemha) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#abaihhemha) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#abaihhemha) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#abaihhemha) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#abaihhemha) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Order</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right">956</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right">896</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right">879</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>The top 3 product by total number of order for all periods are <code>Accessories</code>, <code>Platters</code> and <code>Cocktail Glasses</code> with 585, 635 and 644 order respectively.</p>
+</section>
+<section id="we-know-the-top-three-must-order-products-let-us-get-the-cost-based-on" class="level3">
+<h3 class="anchored" data-anchor-id="we-know-the-top-three-must-order-products-let-us-get-the-cost-based-on">We know the top three must order products, let us get the cost based on</h3>
+<p>Average discount paid for each order to customers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_dis <span class="kw">AS</span> (</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> product_id,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied <span class="kw">AS</span> discount</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">FROM</span> sales_order</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, <span class="fu">round</span>(<span class="fu">AVG</span>(discount), <span class="dv">2</span>) <span class="kw">AS</span> Average_Discount</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_dis</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> prod_dis.product_id <span class="op">=</span> product.product_id</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Average_Discount <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="iwgkyptanz" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#iwgkyptanz) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#iwgkyptanz) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#iwgkyptanz) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#iwgkyptanz) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#iwgkyptanz) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#iwgkyptanz) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#iwgkyptanz) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#iwgkyptanz) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#iwgkyptanz) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#iwgkyptanz) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#iwgkyptanz) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#iwgkyptanz) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#iwgkyptanz) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#iwgkyptanz) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#iwgkyptanz) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#iwgkyptanz) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#iwgkyptanz) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#iwgkyptanz) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#iwgkyptanz) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#iwgkyptanz) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#iwgkyptanz) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#iwgkyptanz) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#iwgkyptanz) .gt_left {
+  text-align: left;
+}
+
+:where(#iwgkyptanz) .gt_center {
+  text-align: center;
+}
+
+:where(#iwgkyptanz) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#iwgkyptanz) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#iwgkyptanz) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#iwgkyptanz) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#iwgkyptanz) .gt_super {
+  font-size: 65%;
+}
+
+:where(#iwgkyptanz) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#iwgkyptanz) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#iwgkyptanz) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#iwgkyptanz) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#iwgkyptanz) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#iwgkyptanz) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#iwgkyptanz) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Average Discount</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="background-color: rgba(221,221,221,0.8); font-weight: normal;">Mirrors</td>
+<td class="gt_row gt_right" style="background-color: rgba(221,221,221,0.8); font-weight: normal;">1,511.28</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_right">1,489.14</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_right">1,428.02</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_right">1,417.79</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right">1,342.40</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_right">1,333.43</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_right">1,331.88</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_right">1,329.62</td></tr>
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right">1,327.77</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right">1,314.29</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_right">1,309.64</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_right">1,302.24</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_right">1,290.50</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_right">1,259.69</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_right">1,259.37</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_right">1,242.55</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_right">1,224.22</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_right">1,219.86</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_right">1,203.12</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right">1,195.80</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right">1,193.01</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_right">1,183.27</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_right">1,178.00</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_right">1,168.92</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_right">1,158.46</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_right">1,151.19</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_right">1,151.03</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_right">1,150.46</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_right">1,145.30</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_right">1,144.74</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right">1,119.88</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right">1,113.96</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_right">1,113.67</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_right">1,110.22</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_right">1,109.18</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_right">1,093.76</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_right">1,085.89</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_right">1,080.13</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_right">1,076.17</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_right">1,069.82</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_right">1,052.59</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_right">1,033.39</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_right">1,014.09</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_right">1,010.88</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_right">998.12</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_right">993.84</td></tr>
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">Computers</td>
+<td class="gt_row gt_right" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">971.26</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>The highest average discount was paid for the <code>Mirror</code> product, while the lowest was paid for <code>Computers</code>.</p>
+</section>
+<section id="profit-summary-of-all-products-during" class="level3">
+<h3 class="anchored" data-anchor-id="profit-summary-of-all-products-during">Profit summary of all products during:</h3>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">All</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">2020</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">2019</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">2018</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_rev <span class="kw">AS</span> (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> product_id,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>           ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> <span class="kw">cost</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="op">-</span> ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> profit</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>     <span class="kw">FROM</span> sales_order</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(<span class="kw">cost</span>), <span class="dv">2</span>) <span class="kw">AS</span> Total_Cost,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Total_Profit</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_rev pv</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product p</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> pv.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Profit <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="txmnlitlxj" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#txmnlitlxj) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#txmnlitlxj) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#txmnlitlxj) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#txmnlitlxj) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#txmnlitlxj) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#txmnlitlxj) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#txmnlitlxj) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#txmnlitlxj) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#txmnlitlxj) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#txmnlitlxj) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#txmnlitlxj) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#txmnlitlxj) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#txmnlitlxj) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#txmnlitlxj) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#txmnlitlxj) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#txmnlitlxj) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#txmnlitlxj) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#txmnlitlxj) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#txmnlitlxj) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#txmnlitlxj) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#txmnlitlxj) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#txmnlitlxj) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#txmnlitlxj) .gt_left {
+  text-align: left;
+}
+
+:where(#txmnlitlxj) .gt_center {
+  text-align: center;
+}
+
+:where(#txmnlitlxj) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#txmnlitlxj) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#txmnlitlxj) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#txmnlitlxj) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#txmnlitlxj) .gt_super {
+  font-size: 65%;
+}
+
+:where(#txmnlitlxj) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#txmnlitlxj) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#txmnlitlxj) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#txmnlitlxj) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#txmnlitlxj) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#txmnlitlxj) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#txmnlitlxj) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Sales</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Cost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Profit</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right" style="color: #999999;">2,358,788.61</td>
+<td class="gt_row gt_right" style="color: #999999;">1,707,556.41</td>
+<td class="gt_row gt_right" style="background-color: rgba(207,207,207,0.8); font-weight: bold;">651,232.19</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">2,005,638.31</td>
+<td class="gt_row gt_right" style="color: #999999;">1,452,454.21</td>
+<td class="gt_row gt_right">553,184.09</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">2,011,333.31</td>
+<td class="gt_row gt_right" style="color: #999999;">1,466,743.10</td>
+<td class="gt_row gt_right">544,590.20</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right" style="color: #999999;">1,976,895.30</td>
+<td class="gt_row gt_right" style="color: #999999;">1,437,143.51</td>
+<td class="gt_row gt_right">539,751.79</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_right" style="color: #999999;">1,981,973.90</td>
+<td class="gt_row gt_right" style="color: #999999;">1,457,329.60</td>
+<td class="gt_row gt_right">524,644.30</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_right" style="color: #999999;">1,849,923.60</td>
+<td class="gt_row gt_right" style="color: #999999;">1,326,215.96</td>
+<td class="gt_row gt_right">523,707.64</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right" style="color: #999999;">2,049,958.80</td>
+<td class="gt_row gt_right" style="color: #999999;">1,528,929.09</td>
+<td class="gt_row gt_right">521,029.72</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right" style="color: #999999;">2,052,886.70</td>
+<td class="gt_row gt_right" style="color: #999999;">1,532,489.23</td>
+<td class="gt_row gt_right">520,397.47</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_right" style="color: #999999;">1,925,111.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,419,117.29</td>
+<td class="gt_row gt_right">505,993.71</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_right" style="color: #999999;">2,130,841.20</td>
+<td class="gt_row gt_right" style="color: #999999;">1,626,318.04</td>
+<td class="gt_row gt_right">504,523.16</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_right" style="color: #999999;">1,885,326.39</td>
+<td class="gt_row gt_right" style="color: #999999;">1,381,236.43</td>
+<td class="gt_row gt_right">504,089.96</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_right" style="color: #999999;">2,071,546.20</td>
+<td class="gt_row gt_right" style="color: #999999;">1,568,826.98</td>
+<td class="gt_row gt_right">502,719.22</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right" style="color: #999999;">1,821,837.20</td>
+<td class="gt_row gt_right" style="color: #999999;">1,325,442.68</td>
+<td class="gt_row gt_right">496,394.52</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_right" style="color: #999999;">1,825,415.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,332,367.23</td>
+<td class="gt_row gt_right">493,047.76</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_right" style="color: #999999;">1,870,921.39</td>
+<td class="gt_row gt_right" style="color: #999999;">1,378,187.43</td>
+<td class="gt_row gt_right">492,733.97</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_right" style="color: #999999;">1,921,372.41</td>
+<td class="gt_row gt_right" style="color: #999999;">1,429,144.65</td>
+<td class="gt_row gt_right">492,227.76</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">1,813,589.50</td>
+<td class="gt_row gt_right" style="color: #999999;">1,322,768.98</td>
+<td class="gt_row gt_right">490,820.52</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_right" style="color: #999999;">1,754,783.61</td>
+<td class="gt_row gt_right" style="color: #999999;">1,271,794.57</td>
+<td class="gt_row gt_right">482,989.03</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_right" style="color: #999999;">1,727,112.60</td>
+<td class="gt_row gt_right" style="color: #999999;">1,249,620.72</td>
+<td class="gt_row gt_right">477,491.87</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_right" style="color: #999999;">1,790,675.50</td>
+<td class="gt_row gt_right" style="color: #999999;">1,317,732.19</td>
+<td class="gt_row gt_right">472,943.32</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_right" style="color: #999999;">1,868,140.90</td>
+<td class="gt_row gt_right" style="color: #999999;">1,395,663.94</td>
+<td class="gt_row gt_right">472,476.96</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_right" style="color: #999999;">1,742,422.10</td>
+<td class="gt_row gt_right" style="color: #999999;">1,275,602.72</td>
+<td class="gt_row gt_right">466,819.38</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">1,785,362.40</td>
+<td class="gt_row gt_right" style="color: #999999;">1,321,318.13</td>
+<td class="gt_row gt_right">464,044.27</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_right" style="color: #999999;">1,786,441.10</td>
+<td class="gt_row gt_right" style="color: #999999;">1,329,945.18</td>
+<td class="gt_row gt_right">456,495.92</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_right" style="color: #999999;">1,821,080.09</td>
+<td class="gt_row gt_right" style="color: #999999;">1,365,587.21</td>
+<td class="gt_row gt_right">455,492.89</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_right" style="color: #999999;">1,881,668.20</td>
+<td class="gt_row gt_right" style="color: #999999;">1,428,759.83</td>
+<td class="gt_row gt_right">452,908.37</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">1,846,178.30</td>
+<td class="gt_row gt_right" style="color: #999999;">1,395,752.51</td>
+<td class="gt_row gt_right">450,425.78</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_right" style="color: #999999;">1,837,501.79</td>
+<td class="gt_row gt_right" style="color: #999999;">1,387,507.70</td>
+<td class="gt_row gt_right">449,994.10</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_right" style="color: #999999;">1,607,028.49</td>
+<td class="gt_row gt_right" style="color: #999999;">1,179,443.98</td>
+<td class="gt_row gt_right">427,584.51</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_right" style="color: #999999;">1,709,974.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,285,435.57</td>
+<td class="gt_row gt_right">424,538.43</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_right" style="color: #999999;">1,685,217.50</td>
+<td class="gt_row gt_right" style="color: #999999;">1,266,257.12</td>
+<td class="gt_row gt_right">418,960.37</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_right" style="color: #999999;">1,644,092.90</td>
+<td class="gt_row gt_right" style="color: #999999;">1,225,832.74</td>
+<td class="gt_row gt_right">418,260.16</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_right" style="color: #999999;">1,703,629.10</td>
+<td class="gt_row gt_right" style="color: #999999;">1,288,831.10</td>
+<td class="gt_row gt_right">414,798.00</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">1,528,303.49</td>
+<td class="gt_row gt_right" style="color: #999999;">1,116,922.87</td>
+<td class="gt_row gt_right">411,380.62</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_right" style="color: #999999;">1,529,234.79</td>
+<td class="gt_row gt_right" style="color: #999999;">1,126,161.76</td>
+<td class="gt_row gt_right">403,073.03</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_right" style="color: #999999;">1,697,592.39</td>
+<td class="gt_row gt_right" style="color: #999999;">1,301,471.79</td>
+<td class="gt_row gt_right">396,120.60</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_right" style="color: #999999;">1,402,685.20</td>
+<td class="gt_row gt_right" style="color: #999999;">1,017,257.08</td>
+<td class="gt_row gt_right">385,428.11</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_right" style="color: #999999;">1,536,377.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,151,271.42</td>
+<td class="gt_row gt_right">385,105.58</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_right" style="color: #999999;">1,436,687.70</td>
+<td class="gt_row gt_right" style="color: #999999;">1,052,834.55</td>
+<td class="gt_row gt_right">383,853.14</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_right" style="color: #999999;">1,642,706.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,259,054.72</td>
+<td class="gt_row gt_right">383,651.28</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_right" style="color: #999999;">1,542,400.30</td>
+<td class="gt_row gt_right" style="color: #999999;">1,160,707.77</td>
+<td class="gt_row gt_right">381,692.53</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_right" style="color: #999999;">1,422,322.90</td>
+<td class="gt_row gt_right" style="color: #999999;">1,041,765.48</td>
+<td class="gt_row gt_right">380,557.41</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">1,401,372.00</td>
+<td class="gt_row gt_right" style="color: #999999;">1,035,294.02</td>
+<td class="gt_row gt_right">366,077.98</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">1,620,314.60</td>
+<td class="gt_row gt_right" style="color: #999999;">1,260,024.55</td>
+<td class="gt_row gt_right">360,290.05</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_right" style="color: #999999;">1,584,898.40</td>
+<td class="gt_row gt_right" style="color: #999999;">1,228,773.44</td>
+<td class="gt_row gt_right">356,124.96</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_right" style="color: #999999;">1,268,933.11</td>
+<td class="gt_row gt_right" style="color: #999999;">932,424.53</td>
+<td class="gt_row gt_right">336,508.57</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_right" style="color: #999999;">1,334,231.30</td>
+<td class="gt_row gt_right" style="color: #999999;">1,006,079.64</td>
+<td class="gt_row gt_right">328,151.66</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>Across all sales period the highest amount of profit made from a single product is 651,232.19 e.i the <code>Accessories</code> products.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_rev <span class="kw">AS</span> (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> product_id,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>           <span class="dt">year</span>(order_date) <span class="kw">AS</span> order_year,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>           ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> <span class="kw">cost</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="op">-</span> ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> profit</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">FROM</span> sales_order</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(<span class="kw">cost</span>), <span class="dv">2</span>) <span class="kw">AS</span> Total_Cost,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Total_Profit</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_rev pv</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product p</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> pv.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> order_year <span class="op">=</span> <span class="dv">2020</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Profit <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="vppubzvuaa" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#vppubzvuaa) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#vppubzvuaa) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#vppubzvuaa) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#vppubzvuaa) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#vppubzvuaa) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#vppubzvuaa) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#vppubzvuaa) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#vppubzvuaa) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#vppubzvuaa) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#vppubzvuaa) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#vppubzvuaa) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#vppubzvuaa) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#vppubzvuaa) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#vppubzvuaa) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#vppubzvuaa) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#vppubzvuaa) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#vppubzvuaa) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#vppubzvuaa) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#vppubzvuaa) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#vppubzvuaa) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#vppubzvuaa) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#vppubzvuaa) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#vppubzvuaa) .gt_left {
+  text-align: left;
+}
+
+:where(#vppubzvuaa) .gt_center {
+  text-align: center;
+}
+
+:where(#vppubzvuaa) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#vppubzvuaa) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#vppubzvuaa) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#vppubzvuaa) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#vppubzvuaa) .gt_super {
+  font-size: 65%;
+}
+
+:where(#vppubzvuaa) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#vppubzvuaa) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#vppubzvuaa) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#vppubzvuaa) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#vppubzvuaa) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#vppubzvuaa) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#vppubzvuaa) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Sales</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Cost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Profit</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">916,312.09</td>
+<td class="gt_row gt_right" style="color: #999999;">652,669.15</td>
+<td class="gt_row gt_right" style="background-color: rgba(207,207,207,0.8); font-weight: bold;">263,642.95</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_right" style="color: #999999;">833,727.90</td>
+<td class="gt_row gt_right" style="color: #999999;">587,628.63</td>
+<td class="gt_row gt_right">246,099.27</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right" style="color: #999999;">986,642.00</td>
+<td class="gt_row gt_right" style="color: #999999;">741,352.06</td>
+<td class="gt_row gt_right">245,289.95</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_right" style="color: #999999;">957,128.50</td>
+<td class="gt_row gt_right" style="color: #999999;">716,216.80</td>
+<td class="gt_row gt_right">240,911.70</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_right" style="color: #999999;">848,280.31</td>
+<td class="gt_row gt_right" style="color: #999999;">627,086.37</td>
+<td class="gt_row gt_right">221,193.94</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right" style="color: #999999;">738,306.50</td>
+<td class="gt_row gt_right" style="color: #999999;">517,185.77</td>
+<td class="gt_row gt_right">221,120.74</td></tr>
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right" style="color: #999999;">859,261.61</td>
+<td class="gt_row gt_right" style="color: #999999;">639,682.37</td>
+<td class="gt_row gt_right">219,579.24</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_right" style="color: #999999;">776,081.10</td>
+<td class="gt_row gt_right" style="color: #999999;">559,657.50</td>
+<td class="gt_row gt_right">216,423.59</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">807,443.80</td>
+<td class="gt_row gt_right" style="color: #999999;">599,268.91</td>
+<td class="gt_row gt_right">208,174.89</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_right" style="color: #999999;">810,693.30</td>
+<td class="gt_row gt_right" style="color: #999999;">603,893.78</td>
+<td class="gt_row gt_right">206,799.52</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_right" style="color: #999999;">743,700.00</td>
+<td class="gt_row gt_right" style="color: #999999;">539,511.54</td>
+<td class="gt_row gt_right">204,188.46</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_right" style="color: #999999;">744,644.70</td>
+<td class="gt_row gt_right" style="color: #999999;">542,231.50</td>
+<td class="gt_row gt_right">202,413.19</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_right" style="color: #999999;">719,030.60</td>
+<td class="gt_row gt_right" style="color: #999999;">521,997.07</td>
+<td class="gt_row gt_right">197,033.53</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_right" style="color: #999999;">687,560.70</td>
+<td class="gt_row gt_right" style="color: #999999;">496,048.10</td>
+<td class="gt_row gt_right">191,512.60</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right" style="color: #999999;">693,898.90</td>
+<td class="gt_row gt_right" style="color: #999999;">505,063.79</td>
+<td class="gt_row gt_right">188,835.11</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_right" style="color: #999999;">720,779.30</td>
+<td class="gt_row gt_right" style="color: #999999;">536,897.73</td>
+<td class="gt_row gt_right">183,881.56</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">699,553.70</td>
+<td class="gt_row gt_right" style="color: #999999;">516,005.86</td>
+<td class="gt_row gt_right">183,547.84</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_right" style="color: #999999;">713,014.00</td>
+<td class="gt_row gt_right" style="color: #999999;">532,402.07</td>
+<td class="gt_row gt_right">180,611.93</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_right" style="color: #999999;">694,327.70</td>
+<td class="gt_row gt_right" style="color: #999999;">514,755.81</td>
+<td class="gt_row gt_right">179,571.89</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_right" style="color: #999999;">748,115.30</td>
+<td class="gt_row gt_right" style="color: #999999;">568,793.65</td>
+<td class="gt_row gt_right">179,321.64</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_right" style="color: #999999;">740,618.00</td>
+<td class="gt_row gt_right" style="color: #999999;">563,200.83</td>
+<td class="gt_row gt_right">177,417.17</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_right" style="color: #999999;">750,574.20</td>
+<td class="gt_row gt_right" style="color: #999999;">577,366.17</td>
+<td class="gt_row gt_right">173,208.03</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right" style="color: #999999;">665,417.20</td>
+<td class="gt_row gt_right" style="color: #999999;">493,979.48</td>
+<td class="gt_row gt_right">171,437.72</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_right" style="color: #999999;">620,172.10</td>
+<td class="gt_row gt_right" style="color: #999999;">450,011.30</td>
+<td class="gt_row gt_right">170,160.80</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_right" style="color: #999999;">625,163.60</td>
+<td class="gt_row gt_right" style="color: #999999;">456,713.27</td>
+<td class="gt_row gt_right">168,450.32</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_right" style="color: #999999;">674,200.90</td>
+<td class="gt_row gt_right" style="color: #999999;">508,095.17</td>
+<td class="gt_row gt_right">166,105.73</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_right" style="color: #999999;">553,674.60</td>
+<td class="gt_row gt_right" style="color: #999999;">390,312.69</td>
+<td class="gt_row gt_right">163,361.91</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_right" style="color: #999999;">586,203.09</td>
+<td class="gt_row gt_right" style="color: #999999;">423,082.05</td>
+<td class="gt_row gt_right">163,121.04</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">604,648.20</td>
+<td class="gt_row gt_right" style="color: #999999;">444,052.22</td>
+<td class="gt_row gt_right">160,595.98</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">567,905.40</td>
+<td class="gt_row gt_right" style="color: #999999;">407,477.79</td>
+<td class="gt_row gt_right">160,427.61</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">703,446.40</td>
+<td class="gt_row gt_right" style="color: #999999;">546,054.02</td>
+<td class="gt_row gt_right">157,392.38</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_right" style="color: #999999;">638,128.10</td>
+<td class="gt_row gt_right" style="color: #999999;">482,461.11</td>
+<td class="gt_row gt_right">155,666.99</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_right" style="color: #999999;">479,639.60</td>
+<td class="gt_row gt_right" style="color: #999999;">324,304.36</td>
+<td class="gt_row gt_right">155,335.24</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_right" style="color: #999999;">620,533.90</td>
+<td class="gt_row gt_right" style="color: #999999;">469,036.48</td>
+<td class="gt_row gt_right">151,497.41</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_right" style="color: #999999;">683,748.40</td>
+<td class="gt_row gt_right" style="color: #999999;">532,515.00</td>
+<td class="gt_row gt_right">151,233.40</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_right" style="color: #999999;">684,840.50</td>
+<td class="gt_row gt_right" style="color: #999999;">535,663.03</td>
+<td class="gt_row gt_right">149,177.48</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_right" style="color: #999999;">595,335.20</td>
+<td class="gt_row gt_right" style="color: #999999;">447,076.46</td>
+<td class="gt_row gt_right">148,258.74</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_right" style="color: #999999;">592,909.80</td>
+<td class="gt_row gt_right" style="color: #999999;">447,307.65</td>
+<td class="gt_row gt_right">145,602.15</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_right" style="color: #999999;">584,682.20</td>
+<td class="gt_row gt_right" style="color: #999999;">443,362.12</td>
+<td class="gt_row gt_right">141,320.08</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_right" style="color: #999999;">593,559.70</td>
+<td class="gt_row gt_right" style="color: #999999;">452,422.93</td>
+<td class="gt_row gt_right">141,136.77</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">672,572.80</td>
+<td class="gt_row gt_right" style="color: #999999;">536,338.96</td>
+<td class="gt_row gt_right">136,233.84</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">551,946.00</td>
+<td class="gt_row gt_right" style="color: #999999;">418,936.97</td>
+<td class="gt_row gt_right">133,009.03</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_right" style="color: #999999;">524,469.30</td>
+<td class="gt_row gt_right" style="color: #999999;">397,002.00</td>
+<td class="gt_row gt_right">127,467.30</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_right" style="color: #999999;">484,738.30</td>
+<td class="gt_row gt_right" style="color: #999999;">362,916.15</td>
+<td class="gt_row gt_right">121,822.15</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_right" style="color: #999999;">505,769.60</td>
+<td class="gt_row gt_right" style="color: #999999;">388,417.83</td>
+<td class="gt_row gt_right">117,351.77</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_right" style="color: #999999;">495,491.80</td>
+<td class="gt_row gt_right" style="color: #999999;">387,672.19</td>
+<td class="gt_row gt_right">107,819.61</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_right" style="color: #999999;">365,552.00</td>
+<td class="gt_row gt_right" style="color: #999999;">262,819.90</td>
+<td class="gt_row gt_right">102,732.11</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>In 2020, more profit was made on the <code>Wall Frames</code> product than other products including <code>Accessories</code>.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_rev <span class="kw">AS</span> (</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> product_id,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>           <span class="dt">year</span>(order_date) <span class="kw">AS</span> order_year,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>           ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> <span class="kw">cost</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="op">-</span> ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> profit</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">FROM</span> sales_order</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, </span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(<span class="kw">cost</span>), <span class="dv">2</span>) <span class="kw">AS</span> Total_Cost,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Total_Profit</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_rev pv</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product p</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> pv.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> order_year <span class="op">=</span> <span class="dv">2019</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Profit <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="wazguyvjoh" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#wazguyvjoh) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#wazguyvjoh) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#wazguyvjoh) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#wazguyvjoh) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#wazguyvjoh) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#wazguyvjoh) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#wazguyvjoh) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#wazguyvjoh) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wazguyvjoh) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wazguyvjoh) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#wazguyvjoh) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#wazguyvjoh) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#wazguyvjoh) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wazguyvjoh) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#wazguyvjoh) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#wazguyvjoh) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wazguyvjoh) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#wazguyvjoh) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wazguyvjoh) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#wazguyvjoh) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wazguyvjoh) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wazguyvjoh) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wazguyvjoh) .gt_left {
+  text-align: left;
+}
+
+:where(#wazguyvjoh) .gt_center {
+  text-align: center;
+}
+
+:where(#wazguyvjoh) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#wazguyvjoh) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#wazguyvjoh) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#wazguyvjoh) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#wazguyvjoh) .gt_super {
+  font-size: 65%;
+}
+
+:where(#wazguyvjoh) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#wazguyvjoh) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#wazguyvjoh) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#wazguyvjoh) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#wazguyvjoh) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#wazguyvjoh) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#wazguyvjoh) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Sales</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Cost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Profit</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_right" style="color: #999999;">883,602.70</td>
+<td class="gt_row gt_right" style="color: #999999;">637,043.67</td>
+<td class="gt_row gt_right" style="background-color: rgba(207,207,207,0.8); font-weight: bold;">246,559.02</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_right" style="color: #999999;">850,102.70</td>
+<td class="gt_row gt_right" style="color: #999999;">606,337.88</td>
+<td class="gt_row gt_right">243,764.83</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">824,274.20</td>
+<td class="gt_row gt_right" style="color: #999999;">585,916.95</td>
+<td class="gt_row gt_right">238,357.26</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_right" style="color: #999999;">803,584.60</td>
+<td class="gt_row gt_right" style="color: #999999;">581,704.19</td>
+<td class="gt_row gt_right">221,880.41</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_right" style="color: #999999;">731,097.29</td>
+<td class="gt_row gt_right" style="color: #999999;">513,270.65</td>
+<td class="gt_row gt_right">217,826.64</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">810,251.10</td>
+<td class="gt_row gt_right" style="color: #999999;">596,597.95</td>
+<td class="gt_row gt_right">213,653.15</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_right" style="color: #999999;">910,925.30</td>
+<td class="gt_row gt_right" style="color: #999999;">699,286.47</td>
+<td class="gt_row gt_right">211,638.83</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_right" style="color: #999999;">739,103.80</td>
+<td class="gt_row gt_right" style="color: #999999;">532,101.71</td>
+<td class="gt_row gt_right">207,002.10</td></tr>
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right" style="color: #999999;">774,258.70</td>
+<td class="gt_row gt_right" style="color: #999999;">571,290.68</td>
+<td class="gt_row gt_right">202,968.02</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right" style="color: #999999;">704,190.10</td>
+<td class="gt_row gt_right" style="color: #999999;">501,523.34</td>
+<td class="gt_row gt_right">202,666.75</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">812,160.60</td>
+<td class="gt_row gt_right" style="color: #999999;">610,783.29</td>
+<td class="gt_row gt_right">201,377.31</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_right" style="color: #999999;">774,339.10</td>
+<td class="gt_row gt_right" style="color: #999999;">573,754.57</td>
+<td class="gt_row gt_right">200,584.53</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">720,095.89</td>
+<td class="gt_row gt_right" style="color: #999999;">519,894.64</td>
+<td class="gt_row gt_right">200,201.25</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_right" style="color: #999999;">769,823.30</td>
+<td class="gt_row gt_right" style="color: #999999;">570,849.25</td>
+<td class="gt_row gt_right">198,974.05</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_right" style="color: #999999;">768,804.90</td>
+<td class="gt_row gt_right" style="color: #999999;">578,592.94</td>
+<td class="gt_row gt_right">190,211.96</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right" style="color: #999999;">795,437.40</td>
+<td class="gt_row gt_right" style="color: #999999;">606,022.34</td>
+<td class="gt_row gt_right">189,415.06</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right" style="color: #999999;">672,686.70</td>
+<td class="gt_row gt_right" style="color: #999999;">484,785.87</td>
+<td class="gt_row gt_right">187,900.83</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_right" style="color: #999999;">653,069.10</td>
+<td class="gt_row gt_right" style="color: #999999;">465,210.35</td>
+<td class="gt_row gt_right">187,858.75</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_right" style="color: #999999;">714,501.40</td>
+<td class="gt_row gt_right" style="color: #999999;">527,203.57</td>
+<td class="gt_row gt_right">187,297.83</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_right" style="color: #999999;">718,286.90</td>
+<td class="gt_row gt_right" style="color: #999999;">534,673.40</td>
+<td class="gt_row gt_right">183,613.50</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_right" style="color: #999999;">697,094.80</td>
+<td class="gt_row gt_right" style="color: #999999;">513,840.02</td>
+<td class="gt_row gt_right">183,254.78</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_right" style="color: #999999;">688,833.70</td>
+<td class="gt_row gt_right" style="color: #999999;">511,551.17</td>
+<td class="gt_row gt_right">177,282.53</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_right" style="color: #999999;">659,320.20</td>
+<td class="gt_row gt_right" style="color: #999999;">483,682.32</td>
+<td class="gt_row gt_right">175,637.89</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_right" style="color: #999999;">629,270.70</td>
+<td class="gt_row gt_right" style="color: #999999;">455,856.48</td>
+<td class="gt_row gt_right">173,414.22</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right" style="color: #999999;">715,017.30</td>
+<td class="gt_row gt_right" style="color: #999999;">542,483.93</td>
+<td class="gt_row gt_right">172,533.37</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">631,213.70</td>
+<td class="gt_row gt_right" style="color: #999999;">459,832.83</td>
+<td class="gt_row gt_right">171,380.87</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_right" style="color: #999999;">797,635.00</td>
+<td class="gt_row gt_right" style="color: #999999;">628,027.25</td>
+<td class="gt_row gt_right">169,607.75</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_right" style="color: #999999;">628,299.20</td>
+<td class="gt_row gt_right" style="color: #999999;">460,868.45</td>
+<td class="gt_row gt_right">167,430.75</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_right" style="color: #999999;">664,653.40</td>
+<td class="gt_row gt_right" style="color: #999999;">497,816.70</td>
+<td class="gt_row gt_right">166,836.70</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_right" style="color: #999999;">739,820.70</td>
+<td class="gt_row gt_right" style="color: #999999;">575,704.27</td>
+<td class="gt_row gt_right">164,116.43</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_right" style="color: #999999;">593,894.70</td>
+<td class="gt_row gt_right" style="color: #999999;">431,177.97</td>
+<td class="gt_row gt_right">162,716.73</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_right" style="color: #999999;">629,056.30</td>
+<td class="gt_row gt_right" style="color: #999999;">473,323.51</td>
+<td class="gt_row gt_right">155,732.79</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_right" style="color: #999999;">650,657.10</td>
+<td class="gt_row gt_right" style="color: #999999;">495,531.90</td>
+<td class="gt_row gt_right">155,125.20</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_right" style="color: #999999;">596,949.90</td>
+<td class="gt_row gt_right" style="color: #999999;">443,889.61</td>
+<td class="gt_row gt_right">153,060.29</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_right" style="color: #999999;">547,738.40</td>
+<td class="gt_row gt_right" style="color: #999999;">396,093.78</td>
+<td class="gt_row gt_right">151,644.62</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_right" style="color: #999999;">518,861.40</td>
+<td class="gt_row gt_right" style="color: #999999;">368,236.52</td>
+<td class="gt_row gt_right">150,624.88</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_right" style="color: #999999;">510,084.40</td>
+<td class="gt_row gt_right" style="color: #999999;">359,548.13</td>
+<td class="gt_row gt_right">150,536.27</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_right" style="color: #999999;">632,761.40</td>
+<td class="gt_row gt_right" style="color: #999999;">490,395.75</td>
+<td class="gt_row gt_right">142,365.65</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_right" style="color: #999999;">544,053.40</td>
+<td class="gt_row gt_right" style="color: #999999;">403,033.11</td>
+<td class="gt_row gt_right">141,020.29</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">548,917.60</td>
+<td class="gt_row gt_right" style="color: #999999;">414,858.47</td>
+<td class="gt_row gt_right">134,059.13</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">500,469.90</td>
+<td class="gt_row gt_right" style="color: #999999;">366,597.77</td>
+<td class="gt_row gt_right">133,872.13</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">577,446.20</td>
+<td class="gt_row gt_right" style="color: #999999;">445,727.55</td>
+<td class="gt_row gt_right">131,718.65</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_right" style="color: #999999;">554,780.10</td>
+<td class="gt_row gt_right" style="color: #999999;">428,819.57</td>
+<td class="gt_row gt_right">125,960.53</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_right" style="color: #999999;">580,367.40</td>
+<td class="gt_row gt_right" style="color: #999999;">454,439.56</td>
+<td class="gt_row gt_right">125,927.84</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_right" style="color: #999999;">495,860.30</td>
+<td class="gt_row gt_right" style="color: #999999;">378,937.06</td>
+<td class="gt_row gt_right">116,923.24</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_right" style="color: #999999;">432,491.70</td>
+<td class="gt_row gt_right" style="color: #999999;">328,855.70</td>
+<td class="gt_row gt_right">103,636.00</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_right" style="color: #999999;">338,644.80</td>
+<td class="gt_row gt_right" style="color: #999999;">248,240.06</td>
+<td class="gt_row gt_right">90,404.74</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_rev <span class="kw">AS</span> (</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> product_id,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>           <span class="dt">year</span>(order_date) <span class="kw">AS</span> order_year,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>           ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> <span class="kw">cost</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>           (order_quantity <span class="op">*</span> unit_price) <span class="op">-</span> ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> profit</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">FROM</span> sales_order</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(<span class="kw">cost</span>), <span class="dv">2</span>) <span class="kw">AS</span> Total_Cost,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Total_Profit</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_rev pv</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product p</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> pv.product_id <span class="op">=</span> p.product_id</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> order_year <span class="op">=</span> <span class="dv">2018</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Profit <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="wzfigumkhe" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#wzfigumkhe) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#wzfigumkhe) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#wzfigumkhe) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#wzfigumkhe) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#wzfigumkhe) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#wzfigumkhe) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#wzfigumkhe) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#wzfigumkhe) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wzfigumkhe) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#wzfigumkhe) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#wzfigumkhe) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#wzfigumkhe) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#wzfigumkhe) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wzfigumkhe) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#wzfigumkhe) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#wzfigumkhe) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wzfigumkhe) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#wzfigumkhe) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wzfigumkhe) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#wzfigumkhe) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wzfigumkhe) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#wzfigumkhe) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#wzfigumkhe) .gt_left {
+  text-align: left;
+}
+
+:where(#wzfigumkhe) .gt_center {
+  text-align: center;
+}
+
+:where(#wzfigumkhe) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#wzfigumkhe) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#wzfigumkhe) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#wzfigumkhe) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#wzfigumkhe) .gt_super {
+  font-size: 65%;
+}
+
+:where(#wzfigumkhe) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#wzfigumkhe) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#wzfigumkhe) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#wzfigumkhe) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#wzfigumkhe) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#wzfigumkhe) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#wzfigumkhe) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Sales</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Cost</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Profit</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_right" style="color: #999999;">725,268.30</td>
+<td class="gt_row gt_right" style="color: #999999;">496,583.37</td>
+<td class="gt_row gt_right" style="background-color: rgba(207,207,207,0.8); font-weight: bold;">228,684.93</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_right" style="color: #999999;">669,490.80</td>
+<td class="gt_row gt_right" style="color: #999999;">505,049.62</td>
+<td class="gt_row gt_right">164,441.18</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_right" style="color: #999999;">592,032.10</td>
+<td class="gt_row gt_right" style="color: #999999;">432,487.41</td>
+<td class="gt_row gt_right">159,544.68</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">495,833.51</td>
+<td class="gt_row gt_right" style="color: #999999;">339,850.40</td>
+<td class="gt_row gt_right">155,983.11</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_right" style="color: #999999;">655,869.70</td>
+<td class="gt_row gt_right" style="color: #999999;">500,255.97</td>
+<td class="gt_row gt_right">155,613.73</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_right" style="color: #999999;">578,806.30</td>
+<td class="gt_row gt_right" style="color: #999999;">430,556.37</td>
+<td class="gt_row gt_right">148,249.93</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_right" style="color: #999999;">522,827.80</td>
+<td class="gt_row gt_right" style="color: #999999;">387,894.53</td>
+<td class="gt_row gt_right">134,933.28</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">433,523.50</td>
+<td class="gt_row gt_right" style="color: #999999;">304,507.90</td>
+<td class="gt_row gt_right">129,015.60</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_right" style="color: #999999;">525,226.40</td>
+<td class="gt_row gt_right" style="color: #999999;">400,699.77</td>
+<td class="gt_row gt_right">124,526.63</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_right" style="color: #999999;">449,020.60</td>
+<td class="gt_row gt_right" style="color: #999999;">324,767.96</td>
+<td class="gt_row gt_right">124,252.64</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_right" style="color: #999999;">447,606.90</td>
+<td class="gt_row gt_right" style="color: #999999;">325,026.72</td>
+<td class="gt_row gt_right">122,580.18</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">511,518.20</td>
+<td class="gt_row gt_right" style="color: #999999;">389,865.66</td>
+<td class="gt_row gt_right">121,652.54</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_right" style="color: #999999;">485,582.50</td>
+<td class="gt_row gt_right" style="color: #999999;">365,035.60</td>
+<td class="gt_row gt_right">120,546.90</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_right" style="color: #999999;">514,506.40</td>
+<td class="gt_row gt_right" style="color: #999999;">394,012.40</td>
+<td class="gt_row gt_right">120,494.01</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_right" style="color: #999999;">469,341.70</td>
+<td class="gt_row gt_right" style="color: #999999;">349,665.40</td>
+<td class="gt_row gt_right">119,676.30</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_right" style="color: #999999;">410,931.10</td>
+<td class="gt_row gt_right" style="color: #999999;">295,094.57</td>
+<td class="gt_row gt_right">115,836.54</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_right" style="color: #999999;">429,208.70</td>
+<td class="gt_row gt_right" style="color: #999999;">314,022.13</td>
+<td class="gt_row gt_right">115,186.57</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_right" style="color: #999999;">429,114.90</td>
+<td class="gt_row gt_right" style="color: #999999;">317,651.89</td>
+<td class="gt_row gt_right">111,463.01</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_right" style="color: #999999;">387,641.90</td>
+<td class="gt_row gt_right" style="color: #999999;">276,471.68</td>
+<td class="gt_row gt_right">111,170.22</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_right" style="color: #999999;">379,648.80</td>
+<td class="gt_row gt_right" style="color: #999999;">269,866.79</td>
+<td class="gt_row gt_right">109,782.01</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_right" style="color: #999999;">385,973.60</td>
+<td class="gt_row gt_right" style="color: #999999;">276,758.04</td>
+<td class="gt_row gt_right">109,215.56</td></tr>
+    <tr><td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right" style="color: #999999;">368,513.40</td>
+<td class="gt_row gt_right" style="color: #999999;">265,772.99</td>
+<td class="gt_row gt_right">102,740.41</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_right" style="color: #999999;">402,268.00</td>
+<td class="gt_row gt_right" style="color: #999999;">299,710.63</td>
+<td class="gt_row gt_right">102,557.36</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_right" style="color: #999999;">391,213.00</td>
+<td class="gt_row gt_right" style="color: #999999;">289,727.50</td>
+<td class="gt_row gt_right">101,485.50</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_right" style="color: #999999;">324,548.00</td>
+<td class="gt_row gt_right" style="color: #999999;">224,864.97</td>
+<td class="gt_row gt_right">99,683.04</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">379,615.30</td>
+<td class="gt_row gt_right" style="color: #999999;">281,557.25</td>
+<td class="gt_row gt_right">98,058.05</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_right" style="color: #999999;">345,009.80</td>
+<td class="gt_row gt_right" style="color: #999999;">247,019.96</td>
+<td class="gt_row gt_right">97,989.84</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_right" style="color: #999999;">359,327.70</td>
+<td class="gt_row gt_right" style="color: #999999;">266,571.53</td>
+<td class="gt_row gt_right">92,756.17</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">370,295.60</td>
+<td class="gt_row gt_right" style="color: #999999;">277,958.04</td>
+<td class="gt_row gt_right">92,337.56</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_right" style="color: #999999;">316,782.70</td>
+<td class="gt_row gt_right" style="color: #999999;">224,582.93</td>
+<td class="gt_row gt_right">92,199.77</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_right" style="color: #999999;">388,137.70</td>
+<td class="gt_row gt_right" style="color: #999999;">296,519.99</td>
+<td class="gt_row gt_right">91,617.71</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_right" style="color: #999999;">391,554.70</td>
+<td class="gt_row gt_right" style="color: #999999;">300,505.45</td>
+<td class="gt_row gt_right">91,049.24</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_right" style="color: #999999;">465,475.80</td>
+<td class="gt_row gt_right" style="color: #999999;">376,300.95</td>
+<td class="gt_row gt_right">89,174.85</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right" style="color: #999999;">390,630.10</td>
+<td class="gt_row gt_right" style="color: #999999;">302,791.16</td>
+<td class="gt_row gt_right">87,838.94</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_right" style="color: #999999;">381,853.10</td>
+<td class="gt_row gt_right" style="color: #999999;">294,873.43</td>
+<td class="gt_row gt_right">86,979.67</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_right" style="color: #999999;">349,585.90</td>
+<td class="gt_row gt_right" style="color: #999999;">265,396.98</td>
+<td class="gt_row gt_right">84,188.92</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_right" style="color: #999999;">256,261.60</td>
+<td class="gt_row gt_right" style="color: #999999;">178,091.26</td>
+<td class="gt_row gt_right">78,170.34</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_right" style="color: #999999;">299,697.70</td>
+<td class="gt_row gt_right" style="color: #999999;">222,957.24</td>
+<td class="gt_row gt_right">76,740.46</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_right" style="color: #999999;">373,096.20</td>
+<td class="gt_row gt_right" style="color: #999999;">296,815.26</td>
+<td class="gt_row gt_right">76,280.94</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_right" style="color: #999999;">297,962.40</td>
+<td class="gt_row gt_right" style="color: #999999;">224,752.87</td>
+<td class="gt_row gt_right">73,209.53</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_right" style="color: #999999;">351,817.00</td>
+<td class="gt_row gt_right" style="color: #999999;">278,673.97</td>
+<td class="gt_row gt_right">73,143.03</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_right" style="color: #999999;">296,253.90</td>
+<td class="gt_row gt_right" style="color: #999999;">224,644.03</td>
+<td class="gt_row gt_right">71,609.87</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_right" style="color: #999999;">290,344.50</td>
+<td class="gt_row gt_right" style="color: #999999;">223,466.07</td>
+<td class="gt_row gt_right">66,878.43</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right" style="color: #999999;">320,132.70</td>
+<td class="gt_row gt_right" style="color: #999999;">253,790.51</td>
+<td class="gt_row gt_right">66,342.20</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_right" style="color: #999999;">307,871.70</td>
+<td class="gt_row gt_right" style="color: #999999;">246,118.94</td>
+<td class="gt_row gt_right">61,752.76</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_right" style="color: #999999;">207,411.90</td>
+<td class="gt_row gt_right" style="color: #999999;">162,468.13</td>
+<td class="gt_row gt_right">44,943.76</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_right" style="color: #999999;">168,860.10</td>
+<td class="gt_row gt_right" style="color: #999999;">124,183.76</td>
+<td class="gt_row gt_right">44,676.34</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<h3 class="insight-text anchored">
+Insight
+</h3>
+<p class="insight-summary">
+A total of 47 different products was sold over the selected period of which the <code>Accessories</code> products have the highest total number of order, on the cost side an average of 1,511.28 was paid for the <code>Mirror</code> product which was the highest overall. Again the <code>Accessories</code> products was the most profitable product overall for all selected years and also in 2020.
+</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">1. Exploring Business Sales Period</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./customer.html" class="pagination-link">
+        <span class="nav-page-text">3. Transaction Summary Of Customers</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Ayomide Akinwande. October, 2022</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

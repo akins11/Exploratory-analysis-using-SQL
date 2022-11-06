@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  sidebar: 
+    - title: "Sales Exploratory Analysis"
+      style: "docked"
+      contents:
+        - index.qmd
+        - product.qmd
+        - customer.qmd
+        - sales_channel.qmd
+        - location.qmd
+      search: false
+      background: "#EDF4ED"
+  page-navigation: true
+  page-footer:
+    background: dark
+    left: "Ayomide Akinwande. October, 2022"
+    right: 
+      - icon: github
+        href: https://github.com/akins11/Exploratory-analysis-using-SQL
+      - icon: twitter
+        href: https://twitter.com/Akinwande_ay42
+      
+format:
+  html:
+    theme: 
+      - yeti
+      - custom.scss
+    fontcolor: "#18020C"
+    linkcolor: "#0000CD"
+    toc: false
+
+editor: source
+
+
+

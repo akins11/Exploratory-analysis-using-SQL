@@ -1,0 +1,131 @@
+---
+title: "4. Method Of Product Sales"
+---
+
+<hr>
+
+
+```{r}
+#| include: false
+source("C:/Users/AYOMIDE/Documents/R/R_Projects/eda_SQL/function.R")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(RMariaDB)
+library(DBI)
+library(gt)
+library(gtExtras)
+library(dplyr)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+mysqldb <- RMariaDB::dbConnect(
+  RMariaDB::MariaDB(), user =  "root", 
+  host = "localhost",
+  password = Sys.getenv("password"), 
+  dbname = "sales"
+  )
+```
+
+
+### Starting with the unique sales channels and the number of transactions done through them.
+```{sql}
+#| eval: false
+SELECT sales_channel, count(sales_channel) AS Count
+  FROM sales_order
+  GROUP BY sales_channel
+  ORDER BY Count DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT sales_channel, count(sales_channel) AS Count
+	  FROM sales_order
+    GROUP BY sales_channel
+    ORDER BY Count DESC;
+  "
+) |>
+  mutate(Count = as.integer(Count)) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 2, decimals = 0) |>
+  tbl_opts()
+```
+
+ 
+Most sales can in through the physical store, followed by online platforms
+and distributors, while the wholesale channel brought in the lowest number of
+transactions.
+
+
+### The total & average order quantity and sale from each sales channel.
+```{sql}
+#| eval: false
+WITH sc_qos AS (
+    SELECT sales_channel,
+           order_quantity, 
+           (order_quantity * unit_price) AS sales
+      FROM sales_order
+)
+SELECT sales_channel,
+       round(AVG(order_quantity), 2) AS Average_Order,
+       SUM(order_quantity) AS Total_order,
+       round(AVG(sales), 2) AS Average_Sales,
+       round(SUM(sales), 2) AS Total_Sales
+  FROM sc_qos
+  GROUP BY sales_channel
+  ORDER BY Total_Sales DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH sc_qos AS (
+    	SELECT sales_channel,
+    		     order_quantity,
+    		     (order_quantity * unit_price) AS sales
+    		FROM sales_order
+)
+SELECT sales_channel,
+	     round(AVG(order_quantity), 2) AS Average_Order,
+       SUM(order_quantity) AS Total_order,
+       round(AVG(sales), 2) AS Average_Sales,
+       round(SUM(sales), 2) AS Total_Sales
+	FROM sc_qos
+  GROUP BY sales_channel
+  ORDER BY Total_Sales DESC;
+  "
+)
+
+f |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = c(2, 4)) |>
+  fmt_number(columns = c(3, 5), decimals = 0) |>
+  tbl_opts() |>
+  gt_highlight_cols(columns = c(2, 4), alpha = 0.08, fill = "#F5F5F5") |>
+  gt_highlight_cols(columns = c(3, 5), alpha = 0.3, fill = "#F2F2F2") |>
+  gt_highlight_rows(columns = 2, rows = 4, fill = "#FAFAFA") |>
+  gt_highlight_rows(columns = c(3, 5), rows = 1, fill = "#F2F2F2") |>
+  gt_highlight_rows(columns = 4, rows = 3, fill = "#FAFAFA")
+```
+
+
+<h3 class="insight-text">Insight</h3>
+
+<p class="insight-summary"> 
+Given the rank of the number of transactions from each sales channel, the same
+can also be said for the total amount of order and sales, with the exception
+of the average sales of which the distributor channel had the highest while
+the online channel had the lowest.
+</p>

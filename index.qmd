@@ -1,0 +1,320 @@
+---
+title: "1. Exploring Business Sales Period"
+---
+<hr>
+
+<p class="into-text">
+Before we dive into exploring sales for the selected period, it is important to note that the sales database contains five table of fictitious records which will be used
+to demonstrate how exploration of a business historical sales records can be performed using MySQL DBMS. The analysis will involve looking into various key performance of selected entities based on several factors such as sales, cost, profit, etc.
+</p>
+
+
+```{r}
+#| include: false
+source("C:/Users/AYOMIDE/Documents/R/R_Projects/eda_SQL/function.R")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(RMariaDB)
+library(DBI)
+library(gt)
+library(gtExtras)
+library(dplyr)
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+mysqldb <- RMariaDB::dbConnect(
+  RMariaDB::MariaDB(), user =  "root", 
+  host = "localhost",
+  password = Sys.getenv("password"), 
+  dbname = "sales"
+  )
+```
+
+### The distinct Sales period.
+```{sql}
+#| eval: false
+SELECT DISTINCT year(order_date) AS Distinct_Year,   
+       COUNT(order_date) AS Number_Of_Transactions
+  FROM sales_order
+  GROUP BY Distinct_Year;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "SELECT DISTINCT year(order_date) AS Distinct_Year,
+			    COUNT(order_date) AS Number_Of_Transactions
+  	FROM sales_order
+    GROUP BY Distinct_Year;"
+) |>
+  mutate(Number_Of_Transactions = as.integer(Number_Of_Transactions)) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 2, decimals = 0) |>
+  tbl_opts()
+```
+ 
+The selected sales record started from the year 2018 and ended in 2020 also there were more orders in 2020 than previous years.
+
+<br>
+
+#### Given the different number of product quantity order in each year, do all the sales years contain the full twelve 12 months.
+
+```{sql}
+#| eval: false
+SELECT tbl.order_year, 
+       COUNT(tbl.order_month) AS number_of_distinct_month
+  FROM(SELECT order_date, 
+              year(order_date) AS order_year,  
+              month(order_date) AS order_month
+      		FROM sales_order
+      		GROUP BY order_year, order_month
+      		LIMIT 50) AS tbl
+  GROUP BY tbl.order_year;
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+fetch_res(
+  "SELECT tbl.order_year,
+          COUNT(tbl.order_month) AS number_of_distinct_month
+  	FROM(SELECT order_date,
+                year(order_date) AS order_year,
+                month(order_date) AS order_month
+      		FROM sales_order
+      		GROUP BY order_year, order_month
+      		LIMIT 50) AS tbl
+  	GROUP BY tbl.order_year;"
+) |>
+  cl_name() |>
+  gt()
+```
+  
+Apart from the year 2018 which only sales order records for 8 different months
+all other year have a complete 12 months.
+
+
+### Let's get the Summary of sales across previous sales years.
+```{sql}
+#| eval: false
+WITH sales_year AS (
+      SELECT year(order_date) AS order_year,
+             monthname(order_date) AS order_month,
+             (order_quantity * unit_price) AS sales
+        FROM sales_order
+)
+SELECT order_year, 
+       MIN(sales) AS Minimum,
+       round(AVG(sales), 2) AS Average,
+       round(MAX(sales), 2) AS Maximum,
+       round(SUM(sales), 2) AS Total
+  FROM sales_year
+  GROUP BY order_year;
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+f <- fetch_res(
+  "WITH sales_year AS (
+	       SELECT year(order_date) AS order_year,
+		            monthname(order_date) AS order_month,
+                (order_quantity * unit_price) AS sales
+		        FROM sales_order
+  )
+  SELECT order_year,
+  	     MIN(sales) AS Minimum,
+         round(AVG(sales), 2) AS Average,
+         round(MAX(sales), 2) AS Maximum,
+         round(SUM(sales), 2) AS Total
+  	FROM sales_year
+    GROUP BY order_year;"
+)
+
+cl_name(f) |>
+  gt() |>
+  fmt_number(2:5, decimals = 1) |>
+  tbl_opts()
+```
+ 
+More sales was made in 2020 than the previous 2 years given the total amount,
+but on an average the year 2018 had the highest amount followed by the preceding
+years.
+
+
+### How much profit was made in previous sales years?
+```{sql}
+#| eval: false
+CREATE TEMPORARY TABLE rev_date_tbl
+  SELECT order_date,
+         year(order_date) AS order_year,
+         monthname(order_date) AS order_month,
+         order_quantity,
+         unit_price,
+         (order_quantity * unit_price) AS sales,
+         ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+         (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+    FROM sales_order;
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+query <- "
+CREATE TEMPORARY TABLE rev_date_tbl
+	SELECT order_date,
+		     year(order_date) AS order_year,
+         monthname(order_date) AS order_month,
+         order_quantity,
+         unit_price,
+         (order_quantity * unit_price) AS sales,
+		     ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+		     (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+		 FROM sales_order;
+"
+results <- dbSendQuery(mysqldb, query)
+dbClearResult(results)
+```
+
+
+```{sql}
+#| eval: false
+SELECT order_year, 
+       round(AVG(profit), 2) AS Average_Profit, 
+       round(SUM(profit), 2) AS Total_Proft 
+  FROM rev_date_tbl
+  GROUP BY order_year;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "SELECT order_year,
+	        round(AVG(profit), 2) AS Average_Profit,
+          round(SUM(profit), 2) AS Total_Proft
+  	FROM rev_date_tbl
+    GROUP BY order_year;"
+) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(2:3, decimals = 2) |>
+  tbl_opts() |>
+  gt_highlight_rows(rows = 3, font_weight = "normal", fill = "#F7F7F7")  |>
+  gt_highlight_rows(rows = 3, columns = 3, font_weight = "bold", fill = "#F7F7F7")
+```
+
+<br>
+
+The total amount of profit made in 2020 was the highest, this was closely
+followed by the year 2019 while for the average amount of profit the year
+2019 had the highest profit followed by 2018 and 2020.
+
+
+### Given the amount made in each of the last sales years, how much was made in each month for all recorded sales years.
+```{sql}
+#| eval: false
+SELECT order_month, 
+       round(AVG(profit), 2) AS Average_Profit, 
+       round(SUM(profit), 2) AS Total_Profit 
+  FROM rev_date_tbl
+  GROUP BY order_month;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT order_month,
+	       round(AVG(profit), 2) AS Average_Profit,
+         round(SUM(profit), 2) AS Total_Profit
+  	FROM rev_date_tbl
+    GROUP BY order_month;
+  "
+) |>
+  mutate(order_month = factor(order_month, levels = month.name)) |>
+  arrange(order_month) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(2:3, decimals = 2) |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 3, font_weight = "normal", fill = "#F7F7F7") |>
+  gt_highlight_rows(rows = 3, columns = 3, font_weight = "bold", fill = "#F7F7F7") |>
+  gt_highlight_rows(rows = 11, font_weight = "normal", fill = "#DDDDDD") |>
+  gt_highlight_rows(rows = 11, columns = 3, font_weight = "bold", fill = "#DDDDDD") |>
+  gt_highlight_rows(rows = 1, columns = 2, font_weight = "bold", fill = "#FFFFFF")
+```
+
+<br>
+  
+The month of November had the highest amount of profit for all three years,
+while January had the highest average profit. Also March in general had the
+lowest profit earned in a month.
+
+
+#### Now that We know that 2020 has the highest amount of the three years present, let's get the profit for each month in that year.
+```{sql}
+#| eval: false
+SELECT order_month,
+       round(AVG(profit), 2) AS Average_Profit, 
+       round(SUM(profit), 2) AS Total_Profit 
+  FROM rev_date_tbl
+  WHERE order_year = 2020
+  GROUP BY order_month
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT order_month,
+	       round(AVG(profit), 2) AS Average_Profit,
+         round(SUM(profit), 2) AS Total_Profit
+  	FROM rev_date_tbl
+    WHERE order_year = 2020
+    GROUP BY order_month
+    ORDER BY Total_Profit DESC;
+  "
+) |>
+  mutate(order_month = factor(order_month, levels = month.name)) |>
+  arrange(order_month) |>
+  cl_name() |>
+  rename(`2020: Order Month` = `Order Month`) |>
+  gt() |>
+  fmt_number(2:3, decimals = 2) |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 3, font_weight = "normal", fill = "#F7F7F7") |>
+  gt_highlight_rows(rows = 3, columns = 3, font_weight = "bold", fill = "#F7F7F7") |>
+  gt_highlight_rows(rows = 1, font_weight = "normal", fill = "#DDDDDD") |>
+  gt_highlight_rows(rows = 1, columns = 2:3, font_weight = "bold", fill = "#DDDDDD") |>
+  gt_highlight_rows(rows = 10, columns = 2, font_weight = "bold", fill = "#FFFFFF")
+```
+
+<br>
+
+For the year 2020 the highest amount of profit was made in January
+while the month with the lowest amount of profit is march, For the average profit
+made across 2020, The highest amount was also made in January while
+October had the lowest average amount.
+
+
+<br>
+<br>
+
+
+<h3 class="insight-text">Insight</h3>
+
+<p class="insight-summary">
+The number of transactions conducted in 2020 and 2019 are almost evenly distributed with the year 2020 having the largest number of transactions, sales and most importantly profit. November is the month with the most profit summed up for all the selected sales period but in 2020 the most profit was made during the first month of the year.
+<p/>

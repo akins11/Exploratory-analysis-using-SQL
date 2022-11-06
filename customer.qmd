@@ -1,0 +1,316 @@
+---
+title: "3. Transaction Summary Of Customers"
+---
+
+<hr>
+
+
+```{r}
+#| include: false
+source("C:/Users/AYOMIDE/Documents/R/R_Projects/eda_SQL/function.R")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(RMariaDB)
+library(DBI)
+library(gt)
+library(gtExtras)
+library(dplyr)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+mysqldb <- RMariaDB::dbConnect(
+  RMariaDB::MariaDB(), user =  "root", 
+  host = "localhost",
+  password = Sys.getenv("password"), 
+  dbname = "sales"
+  )
+```
+
+
+### Given that the company sell products to both customers and businesses, let's get the total number of transaction conducted with each customers.
+
+```{sql}
+#| eval: false
+SELECT customer_names AS Customer, count(customer_names) AS Count
+  FROM customer
+  JOIN sales_order
+  	ON customer.customer_id = sales_order.customer_id
+  GROUP BY customer_names
+  ORDER BY Count DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT customer_names AS Customer, count(customer_names) AS Count
+  	FROM customer
+    JOIN sales_order
+  		ON customer.customer_id = sales_order.customer_id
+  	GROUP BY customer_names
+    ORDER BY Count DESC;
+  "
+) |>
+  gt() |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 1, font_weight = "normal", fill = "#F7F7F7")
+```
+
+<br>
+  
+First the number of customers that have made at least a single order or more over the
+three year period is 50 and the top 3 customers based on the total unique transactions conducted are `Medline`, `Eminence Corp` & `Elorac, Corp`.
+
+
+### Now that we know the total number of unique customers and their overall transaction count, we can now proceed to the total order quantity and sales from each customer.
+```{sql}
+#| eval: false
+WITH cus_qos AS (
+      SELECT customer_id,
+             order_quantity,
+             (order_quantity * unit_price) AS sales
+        FROM sales_order
+)
+SELECT customer_names,
+       SUM(order_quantity) AS Total_Order_Quantity,
+       round(SUM(sales), 2) AS Total_Sales
+  FROM cus_qos
+  JOIN customer
+   ON cus_qos.customer_id = customer.customer_id
+  GROUP BY customer_names
+  ORDER BY Total_Sales DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH cus_qos AS (
+	  SELECT customer_id,
+		       order_quantity,
+		       (order_quantity * unit_price) AS sales
+		  FROM sales_order
+)
+SELECT customer_names,
+	     SUM(order_quantity) AS Total_Order_Quantity,
+       round(SUM(sales), 2) AS Total_Sales
+	 FROM cus_qos
+   JOIN customer
+		 ON cus_qos.customer_id = customer.customer_id
+	 GROUP BY customer_names
+   ORDER BY Total_Sales DESC;
+  "
+)
+
+f |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 2:3, decimals = 0) |>
+  tbl_opts(container.height = px(380)) |>
+  cols_align(align = "center", columns = 2:3) |>
+  gt_highlight_rows(columns = 2:3,
+                    rows = 1,
+                    font_weight = "normal", fill = "#F7F7F7")
+```
+
+<br>
+
+It is no surprise that `Medline` is the customer with the highest number of
+order and sales given that they had the highest number of purchase transactions with the
+company.
+
+
+#### A quick dive into Medline and the amount of order and sales for each product.
+
+```{sql}
+#| eval: false
+WITH cus_prod_ors AS (
+      SELECT customer_id,
+             product_id,
+             order_quantity,
+             (order_quantity * unit_price) AS sales
+        FROM sales_order
+)
+SELECT product_name, 
+       SUM(order_quantity) AS Total_Order_Quantity,
+       round(SUM(sales), 2) AS Total_Sales
+  FROM cus_prod_ors
+  JOIN customer
+  	 ON cus_prod_ors.customer_id = customer.customer_id
+  JOIN product
+  	 ON cus_prod_ors.product_id = product.product_id
+  WHERE customer_names = 'Medline'
+  GROUP BY product_name
+  ORDER BY Total_Sales DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH cus_prod_ors AS (
+	    SELECT customer_id,
+		         product_id,
+             order_quantity,
+		         (order_quantity * unit_price) AS sales
+		FROM sales_order
+)
+SELECT product_name,
+	     SUM(order_quantity) AS Total_Order_Quantity,
+       round(SUM(sales), 2) AS Total_Sales
+	FROM cus_prod_ors
+  JOIN customer
+		 ON cus_prod_ors.customer_id = customer.customer_id
+	JOIN product
+		 ON cus_prod_ors.product_id = product.product_id
+	WHERE customer_names = 'Medline'
+	GROUP BY product_name
+  ORDER BY Total_Sales DESC;
+  "
+)
+
+f |>
+  remove_str(product_name) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 3) |>
+  cols_align(align = "center", columns = 2:3) |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 1, font_weight = "normal", fill = "#F7F7F7")
+```
+
+<br>
+
+The most purchased product from `Medline` is the `Floral` product with 48 orders
+and 144,023.2 in sales.
+
+
+
+### Moving forward, it is important to know which of the customers are bringing in the highest amount of profit for the business, so let's get the top 10 customers based on the total amount of profit made from the sales of products.
+
+```{sql}
+#| eval: false
+WITH cus_sp AS (
+      SELECT customer_id,
+             (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+        FROM sales_order
+)
+SELECT customer_names,
+       round(AVG(profit), 2) AS Average_Profit,
+       round(SUM(profit), 2) AS Total_Profit
+  FROM cus_sp
+  JOIN customer 
+  	ON cus_sp.customer_id = customer.customer_id
+  GROUP BY customer_names
+  ORDER BY Total_Profit DESC
+  LIMIT 10;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH cus_sp AS (
+	   SELECT customer_id,
+            (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+		   FROM sales_order
+)
+SELECT customer_names,
+	     round(AVG(profit), 2) AS Average_Profit,
+       round(SUM(profit), 2) AS Total_Profit
+	FROM cus_sp
+  JOIN customer
+		ON cus_sp.customer_id = customer.customer_id
+	GROUP BY customer_names
+  ORDER BY Total_Profit DESC
+  LIMIT 10;
+  "
+)
+
+f |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 2:3) |>
+  tbl_opts() |>
+  gt_highlight_rows(columns = 3, rows = 1, fill = "#F7F7F7") |>
+  gt_highlight_rows(columns = 2, rows = 8, fill = "#F7F7F7")
+```
+
+`Medline` maintains it position as the top customer with the highest profit made
+while `Trigen` had the highest average profit for all periods.
+
+
+
+### And lastly on customer exploration, it will be useful to get the highest amount spent on a particular product by a customer.
+
+```{sql}
+#| eval: false
+WITH prod_cus_sale AS (
+      SELECT customer_id,
+             product_id,
+             (order_quantity * unit_price) AS sales
+        FROM sales_order
+)
+SELECT customer_names, 
+       product_name,
+       round(SUM(sales), 2) AS Total_Sales
+  FROM prod_cus_sale
+  JOIN customer
+  	ON prod_cus_sale.customer_id = customer.customer_id
+  JOIN product
+  	ON prod_cus_sale.product_id = product.product_id
+  GROUP BY customer_names, product_name
+  ORDER BY Total_Sales DESC
+  LIMIT 5;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_cus_sale AS (
+	    SELECT customer_id,
+		         product_id,
+             (order_quantity * unit_price) AS sales
+		    FROM sales_order
+)
+SELECT customer_names,
+	     product_name,
+       round(SUM(sales), 2) AS Total_Sales
+	FROM prod_cus_sale
+  JOIN customer
+		ON prod_cus_sale.customer_id = customer.customer_id
+	JOIN product
+		ON prod_cus_sale.product_id = product.product_id
+	GROUP BY customer_names, product_name
+  ORDER BY Total_Sales DESC
+  LIMIT 5;
+  "
+)
+
+f |>
+  remove_str(product_name) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 3) |>
+  tbl_opts() |>
+  gt_highlight_rows(rows = 1, fill = "#F7F7F7")
+```
+
+Customer `Eminence Corp` on the `Wardrobes` product.
+
+<br>
+
+<h3 class="insight-text">Insight</h3>
+
+<p class="insight-summary">
+All customers have made 630 and above product order within the selected period and the top customer based on number of order, sales and profit is `Medline` while highest profit made on an average can from `Trigen`. 
+</p>

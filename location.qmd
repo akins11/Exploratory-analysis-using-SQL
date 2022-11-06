@@ -1,0 +1,314 @@
+---
+title: "5. Geo-location Summary"
+---
+
+<hr>
+
+```{r}
+#| include: false
+source("C:/Users/AYOMIDE/Documents/R/R_Projects/eda_SQL/function.R")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(RMariaDB)
+library(DBI)
+library(gt)
+library(gtExtras)
+library(dplyr)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+mysqldb <- RMariaDB::dbConnect(
+  RMariaDB::MariaDB(), user =  "root", 
+  host = "localhost",
+  password = Sys.getenv("password"), 
+  dbname = "sales"
+  )
+```
+
+##### A temporary table containing sales, cost and profit. 
+```{sql}
+#| eval: false
+CREATE TEMPORARY TABLE revenue_tbl
+      SELECT store_id,
+             year(order_date) AS order_year,
+             (order_quantity * unit_price) AS sales,
+             ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+             (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+        FROM sales_order;
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+query <- "
+CREATE TEMPORARY TABLE revenue_tbl
+  	SELECT store_id,
+           year(order_date) AS order_year,
+           (order_quantity * unit_price) AS sales,
+  		     ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+  		     (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+  		FROM sales_order;
+"
+results <- dbSendQuery(mysqldb, query)
+dbClearResult(results)
+```
+
+### Total sales, cost and profit By :-
+
+::: {.panel-tabset}
+
+## Region
+```{sql}
+#| eval: false
+SELECT r.region, 
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+  	ON rt.store_id = s.store_id
+  JOIN regions r
+  	ON s.state_code = r.state_code
+  GROUP BY r.region
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT r.region, 
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+    JOIN store s
+  		ON rt.store_id = s.store_id
+  	JOIN regions r
+  		ON s.state_code = r.state_code
+  	GROUP BY r.region
+    ORDER BY Total_Profit DESC;
+  "
+) |>
+  loc_sales_cost_profit_gt()
+```
+
+ 
+The highest profit was made in th west region, followed by the South and
+Midwest, while the Northeast Region was where the lowest profit was made.
+
+
+## State 
+```{sql}
+#| eval: false
+SELECT s.state, 
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+    ON rt.store_id = s.store_id
+  GROUP BY s.state
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT s.state, 
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+       JOIN store s
+  		   ON rt.store_id = s.store_id
+  	GROUP BY s.state
+    ORDER BY Total_Profit DESC;
+  "
+) |>
+  loc_sales_cost_profit_gt()
+```
+
+
+## County
+```{sql}
+#| eval: false
+SELECT s.county, 
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+  	ON rt.store_id = s.store_id
+  GROUP BY s.county
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT s.county, 
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+    JOIN store s
+  		ON rt.store_id = s.store_id
+  	GROUP BY s.county
+    ORDER BY Total_Profit DESC;
+  "
+) |>
+  loc_sales_cost_profit_gt()
+```
+
+
+## City
+```{sql}
+#| eval: false
+SELECT s.city_name AS City, 
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+  	ON rt.store_id = s.store_id
+  GROUP BY s.city_name
+  ORDER BY Total_Cost DESC;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT s.city_name AS City, 
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+    JOIN store s
+  		ON rt.store_id = s.store_id
+  	GROUP BY s.city_name
+    ORDER BY Total_Cost DESC;
+  "
+) |>
+  loc_sales_cost_profit_gt()
+```
+
+:::
+
+
+### Top 5 locations with the highest profit:
+
+::: {.panel-tabset}
+
+## overall
+```{sql}
+#| eval: false
+SELECT r.region, s.state, s.county, s.city_name,
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+  	ON rt.store_id = s.store_id
+  JOIN regions r
+  	ON s.state_code = r.state_code
+  GROUP BY r.region, s.state, s.county, s.city_name
+  ORDER BY Total_Profit DESC
+  LIMIT 5;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT r.region, s.state, s.county, s.city_name,
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+    JOIN store s
+  		ON rt.store_id = s.store_id
+  	JOIN regions r
+  		ON s.state_code = r.state_code
+  	GROUP BY r.region, s.state, s.county, s.city_name
+    ORDER BY Total_Profit DESC
+    LIMIT 5;
+  "
+) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 5:7) |>
+  tbl_opts() |>
+  cols_merge(columns = c(Region, State, County, `City Name`),
+             pattern = "{1} Region, {2} State, {3}<br>{4}") |>
+  cols_label(Region = "Location") |>
+  data_color(columns = 5:6, colors = "#999999", apply_to = "text") 
+```
+
+
+## 2020
+```{sql}
+#| eval: false
+SELECT r.region, s.state, s.county, s.city_name,
+       round(SUM(rt.sales), 2) AS Total_Sales,
+       round(SUM(rt.cost), 2) AS Total_Cost,
+       round(SUM(rt.profit), 2) AS Total_Profit
+  FROM revenue_tbl rt
+  JOIN store s
+  	ON rt.store_id = s.store_id
+  JOIN regions r
+  	ON s.state_code = r.state_code
+  WHERE order_year = 2020
+  GROUP BY r.region, s.state, s.county, s.city_name
+  ORDER BY Total_Profit DESC
+  LIMIT 5;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT r.region, s.state, s.county, s.city_name,
+	       round(SUM(rt.sales), 2) AS Total_Sales,
+         round(SUM(rt.cost), 2) AS Total_Cost,
+         round(SUM(rt.profit), 2) AS Total_Profit
+  	FROM revenue_tbl rt
+    JOIN store s
+  		ON rt.store_id = s.store_id
+  	JOIN regions r
+  		ON s.state_code = r.state_code
+    WHERE order_year = 2020
+  	GROUP BY r.region, s.state, s.county, s.city_name
+    ORDER BY Total_Profit DESC
+    LIMIT 5;
+  "
+) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 5:7) |>
+  tbl_opts() |>                       
+  cols_merge(columns = c(Region, State, County, `City Name`),
+             pattern = "{1} Region, {2} State, {3}<br>{4}") |>
+  cols_label(Region = "Location") |>
+  data_color(columns = 5:6, colors = "#999999", apply_to = "text") 
+```
+
+:::
+
+<h3 class="insight-text">Insight</h3>
+
+<p class="insight-summary">
+In 2020 The store at Vallejo in Solano County in the state of California within the West region made the most profit for the company. While for all the past years including 2020 Broken Arrow store at Wagoner County in Oklahoma within the Southern region of the country made the most profit.
+<p/>

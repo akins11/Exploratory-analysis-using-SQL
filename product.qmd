@@ -1,0 +1,395 @@
+---
+title: "2. Product Summary"
+---
+
+<hr>
+
+```{r}
+#| include: false
+source("C:/Users/AYOMIDE/Documents/R/R_Projects/eda_SQL/function.R")
+```
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+library(RMariaDB)
+library(DBI)
+library(gt)
+library(gtExtras)
+library(dplyr)
+```
+
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+mysqldb <- RMariaDB::dbConnect(
+  RMariaDB::MariaDB(), user =  "root", 
+  host = "localhost",
+  password = Sys.getenv("password"), 
+  dbname = "sales"
+  )
+```
+
+
+### First let us get all the unique products sold during the selected period.
+```{sql}
+#| eval: false
+SELECT product_name, count(product_name) AS Count
+  FROM product
+  JOIN sales_order
+    ON product.product_id = sales_order.product_id
+  GROUP BY product_name
+  ORDER BY Count DESC;
+```
+
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT product_name, count(product_name) AS Count
+  	FROM product
+    JOIN sales_order
+  		ON product.product_id = sales_order.product_id
+    GROUP BY product_name
+    ORDER BY Count DESC;
+  "
+) |>
+  remove_str(product_name) |>
+  cl_name() |>
+  gt() |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 1:2, font_weight = "normal", fill = "#F7F7F7")
+```
+  
+<br>
+
+There are 47 unique products sold from the above table and
+`Serveware & platters` have the highest number of unique transactions involved in,
+while the `pillows` product have the fewest.
+
+
+### Following the number of times each product was sold, what are the top 3 products
+based on the number of order placed for them by customers?
+```{sql}
+#| eval: false
+SELECT product_name, SUM(order_quantity) AS Total_Order
+  FROM sales_order
+  JOIN product
+  	ON sales_order.product_id = product.product_id
+  GROUP BY product_name
+  ORDER BY Total_Order DESC
+  LIMIT 3;
+```
+
+```{r}
+#| echo: false
+fetch_res(
+  "
+  SELECT product_name, SUM(order_quantity) AS Total_Order
+  	FROM sales_order
+    JOIN product
+  		ON sales_order.product_id = product.product_id
+  	GROUP BY product_name
+    ORDER BY Total_Order DESC
+    LIMIT 3;
+  "
+) |>
+  remove_str(product_name) |>
+  cl_name() |>
+  gt() |>
+  tbl_opts()
+```
+
+<br>
+
+The top 3 product by total number of order for all periods are `Accessories`,
+`Platters` and `Cocktail Glasses` with 585, 635 and 644 order respectively.
+
+
+
+### We know the top three must order products, let us get the cost based on
+Average discount paid for each order to customers.
+```{sql}
+#| eval: false
+WITH prod_dis AS (
+    SELECT product_id,
+           (order_quantity * unit_price) * discount_applied AS discount
+      FROM sales_order
+)
+SELECT product_name, round(AVG(discount), 2) AS Average_Discount
+  FROM prod_dis
+  JOIN product
+  	ON prod_dis.product_id = product.product_id
+  GROUP BY product_name
+  ORDER BY Average_Discount DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_dis AS (
+	  SELECT product_id,
+		       (order_quantity * unit_price) * discount_applied AS discount
+		 FROM sales_order
+)
+SELECT product_name, round(AVG(discount), 2) AS Average_Discount
+	FROM prod_dis
+  JOIN product
+		ON prod_dis.product_id = product.product_id
+	GROUP BY product_name
+  ORDER BY Average_Discount DESC;
+  "
+)
+
+f |>
+  remove_str(product_name) |>
+  cl_name() |>
+  gt() |>
+  fmt_number(columns = 2) |>
+  tbl_opts(container.height = px(380)) |>
+  gt_highlight_rows(rows = 1, font_weight = "normal", fill = "#DDDDDD") |>
+  gt_highlight_rows(rows = 47, font_weight = "normal", fill = "#F7F7F7")
+```
+
+<br>
+
+The highest average discount was paid for the `Mirror` product, while the
+lowest was paid for `Computers`.
+
+
+
+###  Profit summary of all products during:
+
+::: {.panel-tabset}
+
+## All
+```{sql}
+#| eval: false
+WITH prod_rev AS (
+    SELECT product_id,
+           (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+	 FROM sales_order
+)
+SELECT product_name, 
+       round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+  FROM prod_rev pv
+  JOIN product p
+  	ON pv.product_id = p.product_id
+  GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_rev AS (
+	SELECT product_id,
+		     (order_quantity * unit_price) AS sales,
+         ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+         (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+	 FROM sales_order
+)
+SELECT product_name,
+	     round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+	FROM prod_rev pv
+  JOIN product p
+		ON pv.product_id = p.product_id
+	GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+  "
+)
+
+prod_sales_cost_profit_gt(f)
+```
+
+<br>
+
+Across all sales period the highest amount of profit made from a single product
+is 651,232.19 e.i the `Accessories` products.
+
+
+## 2020
+```{sql}
+#| eval: false
+WITH prod_rev AS (
+    SELECT product_id,
+           year(order_date) AS order_year,
+           (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+      FROM sales_order
+)
+SELECT product_name, 
+       round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+  FROM prod_rev pv
+  JOIN product p
+  	ON pv.product_id = p.product_id
+  WHERE order_year = 2020
+  GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_rev AS (
+	  SELECT product_id,
+		       year(order_date) AS order_year,
+		       (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+		 FROM sales_order
+)
+SELECT product_name,
+	     round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+	FROM prod_rev pv
+  JOIN product p
+		ON pv.product_id = p.product_id
+	WHERE order_year = 2020
+	GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+  "
+)
+
+prod_sales_cost_profit_gt(f)
+```
+
+<br>
+   
+In 2020, more profit was made on the `Wall Frames` product than other products
+including `Accessories`.
+
+
+
+## 2019
+```{sql}
+#| eval: false
+WITH prod_rev AS (
+    SELECT product_id,
+           year(order_date) AS order_year,
+           (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+      FROM sales_order
+)
+SELECT product_name, 
+       round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+  FROM prod_rev pv
+  JOIN product p
+  	ON pv.product_id = p.product_id
+  WHERE order_year = 2019
+  GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_rev AS (
+	  SELECT product_id,
+		       year(order_date) AS order_year,
+		       (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+		 FROM sales_order
+)
+SELECT product_name,
+	     round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+	FROM prod_rev pv
+  JOIN product p
+		ON pv.product_id = p.product_id
+	WHERE order_year = 2019
+	GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+  "
+)
+
+prod_sales_cost_profit_gt(f)
+```
+
+
+
+
+## 2018
+```{sql}
+#| eval: false
+WITH prod_rev AS (
+    SELECT product_id,
+           year(order_date) AS order_year,
+           (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+      FROM sales_order
+)
+SELECT product_name, 
+       round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+  FROM prod_rev pv
+  JOIN product p
+  	ON pv.product_id = p.product_id
+  WHERE order_year = 2018
+  GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+```
+
+```{r}
+#| echo: false
+f <- fetch_res(
+  "
+  WITH prod_rev AS (
+	  SELECT product_id,
+		       year(order_date) AS order_year,
+		       (order_quantity * unit_price) AS sales,
+           ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS cost,
+           (order_quantity * unit_price) - ((order_quantity * unit_cost) + ((order_quantity * unit_price) * discount_applied)) AS profit
+		 FROM sales_order
+)
+SELECT product_name,
+	     round(SUM(sales), 2) AS Total_Sales,
+       round(SUM(cost), 2) AS Total_Cost,
+       round(SUM(profit), 2) AS Total_Profit
+	FROM prod_rev pv
+  JOIN product p
+		ON pv.product_id = p.product_id
+	WHERE order_year = 2018
+	GROUP BY product_name
+  ORDER BY Total_Profit DESC;
+  "
+)
+
+prod_sales_cost_profit_gt(f)
+```
+
+
+:::
+
+<br>
+
+<h3 class="insight-text">Insight</h3>
+
+<p class="insight-summary">
+A total of 47 different products was sold over the selected period of which the `Accessories` products have the highest total number of order, on the cost side an average of 1,511.28 was paid for the `Mirror` product which was the highest overall. Again the `Accessories` products was the most profitable product overall for all selected years and also in 2020.
+</p>

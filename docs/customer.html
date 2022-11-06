@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.149">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3. Transaction Summary Of Customers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./sales_channel.html" rel="next">
+<link href="./product.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">3. Transaction Summary Of Customers</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Sales Exploratory Analysis</a> 
+    </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">1. Exploring Business Sales Period</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./product.html" class="sidebar-item-text sidebar-link">2. Product Summary</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./customer.html" class="sidebar-item-text sidebar-link active">3. Transaction Summary Of Customers</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sales_channel.html" class="sidebar-item-text sidebar-link">4. Method Of Product Sales</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./location.html" class="sidebar-item-text sidebar-link">5. Geo-location Summary</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">3. Transaction Summary Of Customers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<section id="given-that-the-company-sell-products-to-both-customers-and-businesses-lets-get-the-total-number-of-transaction-conducted-with-each-customers." class="level3">
+<h3 class="anchored" data-anchor-id="given-that-the-company-sell-products-to-both-customers-and-businesses-lets-get-the-total-number-of-transaction-conducted-with-each-customers.">Given that the company sell products to both customers and businesses, let’s get the total number of transaction conducted with each customers.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> customer_names <span class="kw">AS</span> Customer, <span class="fu">count</span>(customer_names) <span class="kw">AS</span> <span class="fu">Count</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> customer</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> sales_order</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> customer.customer_id <span class="op">=</span> sales_order.customer_id</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> customer_names</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> <span class="fu">Count</span> <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="diczeckijy" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#diczeckijy) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#diczeckijy) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#diczeckijy) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#diczeckijy) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#diczeckijy) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#diczeckijy) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#diczeckijy) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#diczeckijy) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#diczeckijy) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#diczeckijy) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#diczeckijy) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#diczeckijy) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#diczeckijy) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#diczeckijy) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#diczeckijy) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#diczeckijy) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#diczeckijy) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#diczeckijy) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#diczeckijy) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#diczeckijy) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#diczeckijy) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#diczeckijy) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#diczeckijy) .gt_left {
+  text-align: left;
+}
+
+:where(#diczeckijy) .gt_center {
+  text-align: center;
+}
+
+:where(#diczeckijy) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#diczeckijy) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#diczeckijy) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#diczeckijy) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#diczeckijy) .gt_super {
+  font-size: 65%;
+}
+
+:where(#diczeckijy) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#diczeckijy) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#diczeckijy) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#diczeckijy) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#diczeckijy) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#diczeckijy) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#diczeckijy) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Customer</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Count</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">Medline</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">210</td></tr>
+    <tr><td class="gt_row gt_left">Eminence Corp</td>
+<td class="gt_row gt_center">186</td></tr>
+    <tr><td class="gt_row gt_left">Elorac, Corp</td>
+<td class="gt_row gt_center">181</td></tr>
+    <tr><td class="gt_row gt_left">Apotheca, Ltd</td>
+<td class="gt_row gt_center">179</td></tr>
+    <tr><td class="gt_row gt_left">Apollo Ltd</td>
+<td class="gt_row gt_center">178</td></tr>
+    <tr><td class="gt_row gt_left">Victory Ltd</td>
+<td class="gt_row gt_center">176</td></tr>
+    <tr><td class="gt_row gt_left">OUR Ltd</td>
+<td class="gt_row gt_center">176</td></tr>
+    <tr><td class="gt_row gt_left">Pure Group</td>
+<td class="gt_row gt_center">175</td></tr>
+    <tr><td class="gt_row gt_left">OHTA'S Corp</td>
+<td class="gt_row gt_center">173</td></tr>
+    <tr><td class="gt_row gt_left">Fenwal, Corp</td>
+<td class="gt_row gt_center">172</td></tr>
+    <tr><td class="gt_row gt_left">Ole Group</td>
+<td class="gt_row gt_center">171</td></tr>
+    <tr><td class="gt_row gt_left">Ei</td>
+<td class="gt_row gt_center">171</td></tr>
+    <tr><td class="gt_row gt_left">Niconovum Corp</td>
+<td class="gt_row gt_center">168</td></tr>
+    <tr><td class="gt_row gt_left">ETUDE Ltd</td>
+<td class="gt_row gt_center">167</td></tr>
+    <tr><td class="gt_row gt_left">Pacific Ltd</td>
+<td class="gt_row gt_center">167</td></tr>
+    <tr><td class="gt_row gt_left">Qualitest</td>
+<td class="gt_row gt_center">165</td></tr>
+    <tr><td class="gt_row gt_left">Ohio</td>
+<td class="gt_row gt_center">164</td></tr>
+    <tr><td class="gt_row gt_left">E. Ltd</td>
+<td class="gt_row gt_center">164</td></tr>
+    <tr><td class="gt_row gt_left">Sundial</td>
+<td class="gt_row gt_center">163</td></tr>
+    <tr><td class="gt_row gt_left">Prasco Group</td>
+<td class="gt_row gt_center">162</td></tr>
+    <tr><td class="gt_row gt_left">Llorens Ltd</td>
+<td class="gt_row gt_center">161</td></tr>
+    <tr><td class="gt_row gt_left">Weimei Corp</td>
+<td class="gt_row gt_center">161</td></tr>
+    <tr><td class="gt_row gt_left">Procter Corp</td>
+<td class="gt_row gt_center">159</td></tr>
+    <tr><td class="gt_row gt_left">S.S.S. Group</td>
+<td class="gt_row gt_center">159</td></tr>
+    <tr><td class="gt_row gt_left">21st Ltd</td>
+<td class="gt_row gt_center">158</td></tr>
+    <tr><td class="gt_row gt_left">U.S. Ltd</td>
+<td class="gt_row gt_center">157</td></tr>
+    <tr><td class="gt_row gt_left">Linde</td>
+<td class="gt_row gt_center">157</td></tr>
+    <tr><td class="gt_row gt_left">O.E. Ltd</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Nipro</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Winthrop</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Trigen</td>
+<td class="gt_row gt_center">156</td></tr>
+    <tr><td class="gt_row gt_left">Mylan Corp</td>
+<td class="gt_row gt_center">153</td></tr>
+    <tr><td class="gt_row gt_left">New Ltd</td>
+<td class="gt_row gt_center">153</td></tr>
+    <tr><td class="gt_row gt_left">AuroMedics Corp</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Avon Corp</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Uriel Group</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Bare</td>
+<td class="gt_row gt_center">152</td></tr>
+    <tr><td class="gt_row gt_left">Exact-Rx, Corp</td>
+<td class="gt_row gt_center">151</td></tr>
+    <tr><td class="gt_row gt_left">Burt's Corp</td>
+<td class="gt_row gt_center">151</td></tr>
+    <tr><td class="gt_row gt_left">Select</td>
+<td class="gt_row gt_center">150</td></tr>
+    <tr><td class="gt_row gt_left">Ascend Ltd</td>
+<td class="gt_row gt_center">150</td></tr>
+    <tr><td class="gt_row gt_left">Amylin Group</td>
+<td class="gt_row gt_center">145</td></tr>
+    <tr><td class="gt_row gt_left">Dharma Ltd</td>
+<td class="gt_row gt_center">145</td></tr>
+    <tr><td class="gt_row gt_left">Wuxi Group</td>
+<td class="gt_row gt_center">144</td></tr>
+    <tr><td class="gt_row gt_left">PEDIFIX, Corp</td>
+<td class="gt_row gt_center">143</td></tr>
+    <tr><td class="gt_row gt_left">Rochester Ltd</td>
+<td class="gt_row gt_center">142</td></tr>
+    <tr><td class="gt_row gt_left">Medsep Group</td>
+<td class="gt_row gt_center">142</td></tr>
+    <tr><td class="gt_row gt_left">Capweld</td>
+<td class="gt_row gt_center">140</td></tr>
+    <tr><td class="gt_row gt_left">3LAB, Ltd</td>
+<td class="gt_row gt_center">135</td></tr>
+    <tr><td class="gt_row gt_left">WakeFern</td>
+<td class="gt_row gt_center">135</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>First the number of customers that have made at least a single order or more over the three year period is 50 and the top 3 customers based on the total unique transactions conducted are <code>Medline</code>, <code>Eminence Corp</code> &amp; <code>Elorac, Corp</code>.</p>
+</section>
+<section id="now-that-we-know-the-total-number-of-unique-customers-and-their-overall-transaction-count-we-can-now-proceed-to-the-total-order-quantity-and-sales-from-each-customer." class="level3">
+<h3 class="anchored" data-anchor-id="now-that-we-know-the-total-number-of-unique-customers-and-their-overall-transaction-count-we-can-now-proceed-to-the-total-order-quantity-and-sales-from-each-customer.">Now that we know the total number of unique customers and their overall transaction count, we can now proceed to the total order quantity and sales from each customer.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> cus_qos <span class="kw">AS</span> (</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>      <span class="kw">SELECT</span> customer_id,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>             order_quantity,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>             (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">FROM</span> sales_order</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> customer_names,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">SUM</span>(order_quantity) <span class="kw">AS</span> Total_Order_Quantity,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> cus_qos</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> customer</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>   <span class="kw">ON</span> cus_qos.customer_id <span class="op">=</span> customer.customer_id</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> customer_names</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Sales <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="zpjzvgsfzz" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#zpjzvgsfzz) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#zpjzvgsfzz) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#zpjzvgsfzz) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#zpjzvgsfzz) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#zpjzvgsfzz) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#zpjzvgsfzz) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#zpjzvgsfzz) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#zpjzvgsfzz) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#zpjzvgsfzz) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#zpjzvgsfzz) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#zpjzvgsfzz) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#zpjzvgsfzz) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_left {
+  text-align: left;
+}
+
+:where(#zpjzvgsfzz) .gt_center {
+  text-align: center;
+}
+
+:where(#zpjzvgsfzz) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#zpjzvgsfzz) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#zpjzvgsfzz) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#zpjzvgsfzz) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#zpjzvgsfzz) .gt_super {
+  font-size: 65%;
+}
+
+:where(#zpjzvgsfzz) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#zpjzvgsfzz) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#zpjzvgsfzz) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#zpjzvgsfzz) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#zpjzvgsfzz) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#zpjzvgsfzz) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#zpjzvgsfzz) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Customer Names</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Total Order Quantity</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Total Sales</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Medline</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">970</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">2,248,332</td></tr>
+    <tr><td class="gt_row gt_left">Apotheca, Ltd</td>
+<td class="gt_row gt_center">828</td>
+<td class="gt_row gt_center">2,112,222</td></tr>
+    <tr><td class="gt_row gt_left">Pure Group</td>
+<td class="gt_row gt_center">783</td>
+<td class="gt_row gt_center">1,962,015</td></tr>
+    <tr><td class="gt_row gt_left">OUR Ltd</td>
+<td class="gt_row gt_center">796</td>
+<td class="gt_row gt_center">1,937,828</td></tr>
+    <tr><td class="gt_row gt_left">Trigen</td>
+<td class="gt_row gt_center">767</td>
+<td class="gt_row gt_center">1,895,189</td></tr>
+    <tr><td class="gt_row gt_left">Apollo Ltd</td>
+<td class="gt_row gt_center">805</td>
+<td class="gt_row gt_center">1,883,410</td></tr>
+    <tr><td class="gt_row gt_left">Ohio</td>
+<td class="gt_row gt_center">778</td>
+<td class="gt_row gt_center">1,881,628</td></tr>
+    <tr><td class="gt_row gt_left">Ole Group</td>
+<td class="gt_row gt_center">765</td>
+<td class="gt_row gt_center">1,868,322</td></tr>
+    <tr><td class="gt_row gt_left">OHTA'S Corp</td>
+<td class="gt_row gt_center">819</td>
+<td class="gt_row gt_center">1,856,356</td></tr>
+    <tr><td class="gt_row gt_left">Eminence Corp</td>
+<td class="gt_row gt_center">785</td>
+<td class="gt_row gt_center">1,845,783</td></tr>
+    <tr><td class="gt_row gt_left">Elorac, Corp</td>
+<td class="gt_row gt_center">880</td>
+<td class="gt_row gt_center">1,831,947</td></tr>
+    <tr><td class="gt_row gt_left">Ei</td>
+<td class="gt_row gt_center">818</td>
+<td class="gt_row gt_center">1,830,038</td></tr>
+    <tr><td class="gt_row gt_left">Victory Ltd</td>
+<td class="gt_row gt_center">812</td>
+<td class="gt_row gt_center">1,823,941</td></tr>
+    <tr><td class="gt_row gt_left">E. Ltd</td>
+<td class="gt_row gt_center">763</td>
+<td class="gt_row gt_center">1,793,523</td></tr>
+    <tr><td class="gt_row gt_left">ETUDE Ltd</td>
+<td class="gt_row gt_center">781</td>
+<td class="gt_row gt_center">1,770,582</td></tr>
+    <tr><td class="gt_row gt_left">21st Ltd</td>
+<td class="gt_row gt_center">706</td>
+<td class="gt_row gt_center">1,763,943</td></tr>
+    <tr><td class="gt_row gt_left">Prasco Group</td>
+<td class="gt_row gt_center">735</td>
+<td class="gt_row gt_center">1,762,783</td></tr>
+    <tr><td class="gt_row gt_left">Qualitest</td>
+<td class="gt_row gt_center">787</td>
+<td class="gt_row gt_center">1,723,535</td></tr>
+    <tr><td class="gt_row gt_left">Sundial</td>
+<td class="gt_row gt_center">720</td>
+<td class="gt_row gt_center">1,696,226</td></tr>
+    <tr><td class="gt_row gt_left">Fenwal, Corp</td>
+<td class="gt_row gt_center">783</td>
+<td class="gt_row gt_center">1,670,109</td></tr>
+    <tr><td class="gt_row gt_left">Llorens Ltd</td>
+<td class="gt_row gt_center">761</td>
+<td class="gt_row gt_center">1,653,815</td></tr>
+    <tr><td class="gt_row gt_left">S.S.S. Group</td>
+<td class="gt_row gt_center">732</td>
+<td class="gt_row gt_center">1,640,368</td></tr>
+    <tr><td class="gt_row gt_left">Select</td>
+<td class="gt_row gt_center">720</td>
+<td class="gt_row gt_center">1,636,897</td></tr>
+    <tr><td class="gt_row gt_left">Nipro</td>
+<td class="gt_row gt_center">669</td>
+<td class="gt_row gt_center">1,630,030</td></tr>
+    <tr><td class="gt_row gt_left">AuroMedics Corp</td>
+<td class="gt_row gt_center">699</td>
+<td class="gt_row gt_center">1,622,258</td></tr>
+    <tr><td class="gt_row gt_left">O.E. Ltd</td>
+<td class="gt_row gt_center">658</td>
+<td class="gt_row gt_center">1,620,904</td></tr>
+    <tr><td class="gt_row gt_left">Procter Corp</td>
+<td class="gt_row gt_center">717</td>
+<td class="gt_row gt_center">1,609,233</td></tr>
+    <tr><td class="gt_row gt_left">Niconovum Corp</td>
+<td class="gt_row gt_center">739</td>
+<td class="gt_row gt_center">1,579,626</td></tr>
+    <tr><td class="gt_row gt_left">Exact-Rx, Corp</td>
+<td class="gt_row gt_center">666</td>
+<td class="gt_row gt_center">1,564,276</td></tr>
+    <tr><td class="gt_row gt_left">Mylan Corp</td>
+<td class="gt_row gt_center">714</td>
+<td class="gt_row gt_center">1,561,783</td></tr>
+    <tr><td class="gt_row gt_left">Amylin Group</td>
+<td class="gt_row gt_center">697</td>
+<td class="gt_row gt_center">1,555,070</td></tr>
+    <tr><td class="gt_row gt_left">3LAB, Ltd</td>
+<td class="gt_row gt_center">630</td>
+<td class="gt_row gt_center">1,547,774</td></tr>
+    <tr><td class="gt_row gt_left">New Ltd</td>
+<td class="gt_row gt_center">723</td>
+<td class="gt_row gt_center">1,544,062</td></tr>
+    <tr><td class="gt_row gt_left">Weimei Corp</td>
+<td class="gt_row gt_center">689</td>
+<td class="gt_row gt_center">1,533,047</td></tr>
+    <tr><td class="gt_row gt_left">PEDIFIX, Corp</td>
+<td class="gt_row gt_center">639</td>
+<td class="gt_row gt_center">1,530,756</td></tr>
+    <tr><td class="gt_row gt_left">Winthrop</td>
+<td class="gt_row gt_center">714</td>
+<td class="gt_row gt_center">1,529,992</td></tr>
+    <tr><td class="gt_row gt_left">Pacific Ltd</td>
+<td class="gt_row gt_center">754</td>
+<td class="gt_row gt_center">1,523,888</td></tr>
+    <tr><td class="gt_row gt_left">Rochester Ltd</td>
+<td class="gt_row gt_center">627</td>
+<td class="gt_row gt_center">1,512,726</td></tr>
+    <tr><td class="gt_row gt_left">U.S. Ltd</td>
+<td class="gt_row gt_center">659</td>
+<td class="gt_row gt_center">1,508,083</td></tr>
+    <tr><td class="gt_row gt_left">Bare</td>
+<td class="gt_row gt_center">653</td>
+<td class="gt_row gt_center">1,503,467</td></tr>
+    <tr><td class="gt_row gt_left">Capweld</td>
+<td class="gt_row gt_center">614</td>
+<td class="gt_row gt_center">1,494,033</td></tr>
+    <tr><td class="gt_row gt_left">Linde</td>
+<td class="gt_row gt_center">681</td>
+<td class="gt_row gt_center">1,452,225</td></tr>
+    <tr><td class="gt_row gt_left">Uriel Group</td>
+<td class="gt_row gt_center">665</td>
+<td class="gt_row gt_center">1,450,061</td></tr>
+    <tr><td class="gt_row gt_left">Burt's Corp</td>
+<td class="gt_row gt_center">649</td>
+<td class="gt_row gt_center">1,429,961</td></tr>
+    <tr><td class="gt_row gt_left">Ascend Ltd</td>
+<td class="gt_row gt_center">640</td>
+<td class="gt_row gt_center">1,413,988</td></tr>
+    <tr><td class="gt_row gt_left">Medsep Group</td>
+<td class="gt_row gt_center">650</td>
+<td class="gt_row gt_center">1,411,523</td></tr>
+    <tr><td class="gt_row gt_left">Dharma Ltd</td>
+<td class="gt_row gt_center">624</td>
+<td class="gt_row gt_center">1,408,621</td></tr>
+    <tr><td class="gt_row gt_left">Wuxi Group</td>
+<td class="gt_row gt_center">652</td>
+<td class="gt_row gt_center">1,398,009</td></tr>
+    <tr><td class="gt_row gt_left">WakeFern</td>
+<td class="gt_row gt_center">611</td>
+<td class="gt_row gt_center">1,346,265</td></tr>
+    <tr><td class="gt_row gt_left">Avon Corp</td>
+<td class="gt_row gt_center">635</td>
+<td class="gt_row gt_center">1,322,279</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>It is no surprise that <code>Medline</code> is the customer with the highest number of order and sales given that they had the highest number of purchase transactions with the company.</p>
+<section id="a-quick-dive-into-medline-and-the-amount-of-order-and-sales-for-each-product." class="level4">
+<h4 class="anchored" data-anchor-id="a-quick-dive-into-medline-and-the-amount-of-order-and-sales-for-each-product.">A quick dive into Medline and the amount of order and sales for each product.</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> cus_prod_ors <span class="kw">AS</span> (</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>      <span class="kw">SELECT</span> customer_id,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>             product_id,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>             order_quantity,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>             (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">FROM</span> sales_order</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> product_name, </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">SUM</span>(order_quantity) <span class="kw">AS</span> Total_Order_Quantity,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> cus_prod_ors</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> customer</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>     <span class="kw">ON</span> cus_prod_ors.customer_id <span class="op">=</span> customer.customer_id</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>     <span class="kw">ON</span> cus_prod_ors.product_id <span class="op">=</span> product.product_id</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">WHERE</span> customer_names <span class="op">=</span> <span class="st">'Medline'</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> product_name</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Sales <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="oboldhhwmn" style="overflow-x:auto;overflow-y:auto;width:auto;height:380px;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#oboldhhwmn) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#oboldhhwmn) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#oboldhhwmn) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#oboldhhwmn) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#oboldhhwmn) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#oboldhhwmn) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#oboldhhwmn) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#oboldhhwmn) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#oboldhhwmn) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#oboldhhwmn) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#oboldhhwmn) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#oboldhhwmn) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#oboldhhwmn) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#oboldhhwmn) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#oboldhhwmn) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#oboldhhwmn) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#oboldhhwmn) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#oboldhhwmn) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#oboldhhwmn) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#oboldhhwmn) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#oboldhhwmn) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#oboldhhwmn) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#oboldhhwmn) .gt_left {
+  text-align: left;
+}
+
+:where(#oboldhhwmn) .gt_center {
+  text-align: center;
+}
+
+:where(#oboldhhwmn) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#oboldhhwmn) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#oboldhhwmn) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#oboldhhwmn) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#oboldhhwmn) .gt_super {
+  font-size: 65%;
+}
+
+:where(#oboldhhwmn) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#oboldhhwmn) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#oboldhhwmn) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#oboldhhwmn) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#oboldhhwmn) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#oboldhhwmn) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#oboldhhwmn) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Total Order Quantity</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col">Total Sales</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">Floral</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">48</td>
+<td class="gt_row gt_center" style="background-color: rgba(247,247,247,0.8); font-weight: normal;">144,023.20</td></tr>
+    <tr><td class="gt_row gt_left">Accessories</td>
+<td class="gt_row gt_center">43</td>
+<td class="gt_row gt_center">140,117.10</td></tr>
+    <tr><td class="gt_row gt_left">TV and video</td>
+<td class="gt_row gt_center">43</td>
+<td class="gt_row gt_center">104,392.70</td></tr>
+    <tr><td class="gt_row gt_left">Wall Coverings</td>
+<td class="gt_row gt_center">28</td>
+<td class="gt_row gt_center">101,940.50</td></tr>
+    <tr><td class="gt_row gt_left">Bean Bags</td>
+<td class="gt_row gt_center">31</td>
+<td class="gt_row gt_center">94,590.60</td></tr>
+    <tr><td class="gt_row gt_left">Serveware</td>
+<td class="gt_row gt_center">26</td>
+<td class="gt_row gt_center">92,051.30</td></tr>
+    <tr><td class="gt_row gt_left">Floor Lamps</td>
+<td class="gt_row gt_center">34</td>
+<td class="gt_row gt_center">86,986.10</td></tr>
+    <tr><td class="gt_row gt_left">Blankets</td>
+<td class="gt_row gt_center">36</td>
+<td class="gt_row gt_center">77,820.50</td></tr>
+    <tr><td class="gt_row gt_left">Photo Frames</td>
+<td class="gt_row gt_center">22</td>
+<td class="gt_row gt_center">75,060.10</td></tr>
+    <tr><td class="gt_row gt_left">Phones</td>
+<td class="gt_row gt_center">28</td>
+<td class="gt_row gt_center">67,201.00</td></tr>
+    <tr><td class="gt_row gt_left">Wreaths</td>
+<td class="gt_row gt_center">26</td>
+<td class="gt_row gt_center">66,330.00</td></tr>
+    <tr><td class="gt_row gt_left">Platters</td>
+<td class="gt_row gt_center">31</td>
+<td class="gt_row gt_center">64,775.60</td></tr>
+    <tr><td class="gt_row gt_left">Bar Tools</td>
+<td class="gt_row gt_center">29</td>
+<td class="gt_row gt_center">60,728.80</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Decor</td>
+<td class="gt_row gt_center">14</td>
+<td class="gt_row gt_center">56,400.60</td></tr>
+    <tr><td class="gt_row gt_left">Ornaments</td>
+<td class="gt_row gt_center">26</td>
+<td class="gt_row gt_center">55,187.90</td></tr>
+    <tr><td class="gt_row gt_left">Mirrors</td>
+<td class="gt_row gt_center">29</td>
+<td class="gt_row gt_center">51,965.20</td></tr>
+    <tr><td class="gt_row gt_left">Baseball</td>
+<td class="gt_row gt_center">28</td>
+<td class="gt_row gt_center">51,040.60</td></tr>
+    <tr><td class="gt_row gt_left">Pillows</td>
+<td class="gt_row gt_center">14</td>
+<td class="gt_row gt_center">50,779.30</td></tr>
+    <tr><td class="gt_row gt_left">Bakeware</td>
+<td class="gt_row gt_center">18</td>
+<td class="gt_row gt_center">49,439.30</td></tr>
+    <tr><td class="gt_row gt_left">Cookware</td>
+<td class="gt_row gt_center">22</td>
+<td class="gt_row gt_center">47,415.90</td></tr>
+    <tr><td class="gt_row gt_left">Rugs</td>
+<td class="gt_row gt_center">14</td>
+<td class="gt_row gt_center">46,290.30</td></tr>
+    <tr><td class="gt_row gt_left">Vases</td>
+<td class="gt_row gt_center">23</td>
+<td class="gt_row gt_center">45,988.80</td></tr>
+    <tr><td class="gt_row gt_left">Dinnerware</td>
+<td class="gt_row gt_center">26</td>
+<td class="gt_row gt_center">44,407.60</td></tr>
+    <tr><td class="gt_row gt_left">Vanities</td>
+<td class="gt_row gt_center">14</td>
+<td class="gt_row gt_center">43,576.80</td></tr>
+    <tr><td class="gt_row gt_left">Home Fragrances</td>
+<td class="gt_row gt_center">32</td>
+<td class="gt_row gt_center">42,779.50</td></tr>
+    <tr><td class="gt_row gt_left">Wine Storage</td>
+<td class="gt_row gt_center">20</td>
+<td class="gt_row gt_center">38,900.20</td></tr>
+    <tr><td class="gt_row gt_left">Stemware</td>
+<td class="gt_row gt_center">12</td>
+<td class="gt_row gt_center">37,071.10</td></tr>
+    <tr><td class="gt_row gt_left">Furniture Cushions</td>
+<td class="gt_row gt_center">17</td>
+<td class="gt_row gt_center">36,890.20</td></tr>
+    <tr><td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_center">27</td>
+<td class="gt_row gt_center">35,235.30</td></tr>
+    <tr><td class="gt_row gt_left">Pendants</td>
+<td class="gt_row gt_center">16</td>
+<td class="gt_row gt_center">32,836.70</td></tr>
+    <tr><td class="gt_row gt_left">Table Lamps</td>
+<td class="gt_row gt_center">15</td>
+<td class="gt_row gt_center">32,541.90</td></tr>
+    <tr><td class="gt_row gt_left">Computers</td>
+<td class="gt_row gt_center">14</td>
+<td class="gt_row gt_center">31,503.40</td></tr>
+    <tr><td class="gt_row gt_left">Wardrobes</td>
+<td class="gt_row gt_center">20</td>
+<td class="gt_row gt_center">30,371.10</td></tr>
+    <tr><td class="gt_row gt_left">Basketball</td>
+<td class="gt_row gt_center">16</td>
+<td class="gt_row gt_center">29,614.00</td></tr>
+    <tr><td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_center">13</td>
+<td class="gt_row gt_center">28,381.20</td></tr>
+    <tr><td class="gt_row gt_left">Dining Furniture</td>
+<td class="gt_row gt_center">13</td>
+<td class="gt_row gt_center">27,778.20</td></tr>
+    <tr><td class="gt_row gt_left">Festive</td>
+<td class="gt_row gt_center">12</td>
+<td class="gt_row gt_center">22,780.00</td></tr>
+    <tr><td class="gt_row gt_left">Table Linens</td>
+<td class="gt_row gt_center">5</td>
+<td class="gt_row gt_center">20,240.70</td></tr>
+    <tr><td class="gt_row gt_left">Audio</td>
+<td class="gt_row gt_center">20</td>
+<td class="gt_row gt_center">19,550.60</td></tr>
+    <tr><td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_center">13</td>
+<td class="gt_row gt_center">17,929.20</td></tr>
+    <tr><td class="gt_row gt_left">Candleholders</td>
+<td class="gt_row gt_center">5</td>
+<td class="gt_row gt_center">17,554.00</td></tr>
+    <tr><td class="gt_row gt_left">Sculptures</td>
+<td class="gt_row gt_center">8</td>
+<td class="gt_row gt_center">8,629.60</td></tr>
+    <tr><td class="gt_row gt_left">Bedroom Furniture</td>
+<td class="gt_row gt_center">7</td>
+<td class="gt_row gt_center">5,420.30</td></tr>
+    <tr><td class="gt_row gt_left">Cocktail Glasses</td>
+<td class="gt_row gt_center">12</td>
+<td class="gt_row gt_center">4,984.80</td></tr>
+    <tr><td class="gt_row gt_left">Candles</td>
+<td class="gt_row gt_center">9</td>
+<td class="gt_row gt_center">4,361.70</td></tr>
+    <tr><td class="gt_row gt_left">Outdoor Furniture</td>
+<td class="gt_row gt_center">3</td>
+<td class="gt_row gt_center">2,753.70</td></tr>
+    <tr><td class="gt_row gt_left">Clocks</td>
+<td class="gt_row gt_center">8</td>
+<td class="gt_row gt_center">1,715.20</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>The most purchased product from <code>Medline</code> is the <code>Floral</code> product with 48 orders and 144,023.2 in sales.</p>
+</section>
+</section>
+<section id="moving-forward-it-is-important-to-know-which-of-the-customers-are-bringing-in-the-highest-amount-of-profit-for-the-business-so-lets-get-the-top-10-customers-based-on-the-total-amount-of-profit-made-from-the-sales-of-products." class="level3">
+<h3 class="anchored" data-anchor-id="moving-forward-it-is-important-to-know-which-of-the-customers-are-bringing-in-the-highest-amount-of-profit-for-the-business-so-lets-get-the-top-10-customers-based-on-the-total-amount-of-profit-made-from-the-sales-of-products.">Moving forward, it is important to know which of the customers are bringing in the highest amount of profit for the business, so let’s get the top 10 customers based on the total amount of profit made from the sales of products.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> cus_sp <span class="kw">AS</span> (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>      <span class="kw">SELECT</span> customer_id,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             (order_quantity <span class="op">*</span> unit_price) <span class="op">-</span> ((order_quantity <span class="op">*</span> unit_cost) <span class="op">+</span> ((order_quantity <span class="op">*</span> unit_price) <span class="op">*</span> discount_applied)) <span class="kw">AS</span> profit</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">FROM</span> sales_order</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> customer_names,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">AVG</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Average_Profit,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(profit), <span class="dv">2</span>) <span class="kw">AS</span> Total_Profit</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> cus_sp</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> customer </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> cus_sp.customer_id <span class="op">=</span> customer.customer_id</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> customer_names</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Profit <span class="kw">DESC</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="yrojhjzxef" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#yrojhjzxef) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#yrojhjzxef) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#yrojhjzxef) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#yrojhjzxef) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#yrojhjzxef) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#yrojhjzxef) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#yrojhjzxef) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#yrojhjzxef) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#yrojhjzxef) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#yrojhjzxef) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#yrojhjzxef) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#yrojhjzxef) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#yrojhjzxef) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yrojhjzxef) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#yrojhjzxef) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#yrojhjzxef) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yrojhjzxef) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#yrojhjzxef) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yrojhjzxef) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#yrojhjzxef) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yrojhjzxef) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yrojhjzxef) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yrojhjzxef) .gt_left {
+  text-align: left;
+}
+
+:where(#yrojhjzxef) .gt_center {
+  text-align: center;
+}
+
+:where(#yrojhjzxef) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#yrojhjzxef) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#yrojhjzxef) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#yrojhjzxef) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#yrojhjzxef) .gt_super {
+  font-size: 65%;
+}
+
+:where(#yrojhjzxef) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#yrojhjzxef) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#yrojhjzxef) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#yrojhjzxef) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#yrojhjzxef) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#yrojhjzxef) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#yrojhjzxef) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Customer Names</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Average Profit</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Profit</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Medline</td>
+<td class="gt_row gt_right">2,936.76</td>
+<td class="gt_row gt_right" style="background-color: rgba(247,247,247,0.8); font-weight: bold;">616,719.24</td></tr>
+    <tr><td class="gt_row gt_left">Pure Group</td>
+<td class="gt_row gt_right">3,051.59</td>
+<td class="gt_row gt_right">534,027.38</td></tr>
+    <tr><td class="gt_row gt_left">Apotheca, Ltd</td>
+<td class="gt_row gt_right">2,970.79</td>
+<td class="gt_row gt_right">531,770.69</td></tr>
+    <tr><td class="gt_row gt_left">ETUDE Ltd</td>
+<td class="gt_row gt_right">3,155.58</td>
+<td class="gt_row gt_right">526,981.06</td></tr>
+    <tr><td class="gt_row gt_left">Ei</td>
+<td class="gt_row gt_right">2,924.95</td>
+<td class="gt_row gt_right">500,166.45</td></tr>
+    <tr><td class="gt_row gt_left">Sundial</td>
+<td class="gt_row gt_right">3,057.58</td>
+<td class="gt_row gt_right">498,384.99</td></tr>
+    <tr><td class="gt_row gt_left">OUR Ltd</td>
+<td class="gt_row gt_right">2,820.56</td>
+<td class="gt_row gt_right">496,418.67</td></tr>
+    <tr><td class="gt_row gt_left">Trigen</td>
+<td class="gt_row gt_right" style="background-color: rgba(247,247,247,0.8); font-weight: bold;">3,175.92</td>
+<td class="gt_row gt_right">495,444.26</td></tr>
+    <tr><td class="gt_row gt_left">Apollo Ltd</td>
+<td class="gt_row gt_right">2,739.41</td>
+<td class="gt_row gt_right">487,614.23</td></tr>
+    <tr><td class="gt_row gt_left">Ohio</td>
+<td class="gt_row gt_right">2,923.07</td>
+<td class="gt_row gt_right">479,383.08</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p><code>Medline</code> maintains it position as the top customer with the highest profit made while <code>Trigen</code> had the highest average profit for all periods.</p>
+</section>
+<section id="and-lastly-on-customer-exploration-it-will-be-useful-to-get-the-highest-amount-spent-on-a-particular-product-by-a-customer." class="level3">
+<h3 class="anchored" data-anchor-id="and-lastly-on-customer-exploration-it-will-be-useful-to-get-the-highest-amount-spent-on-a-particular-product-by-a-customer.">And lastly on customer exploration, it will be useful to get the highest amount spent on a particular product by a customer.</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> prod_cus_sale <span class="kw">AS</span> (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>      <span class="kw">SELECT</span> customer_id,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>             product_id,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>             (order_quantity <span class="op">*</span> unit_price) <span class="kw">AS</span> sales</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">FROM</span> sales_order</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> customer_names, </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>       product_name,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">round</span>(<span class="fu">SUM</span>(sales), <span class="dv">2</span>) <span class="kw">AS</span> Total_Sales</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> prod_cus_sale</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> customer</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> prod_cus_sale.customer_id <span class="op">=</span> customer.customer_id</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">JOIN</span> product</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">ON</span> prod_cus_sale.product_id <span class="op">=</span> product.product_id</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">GROUP</span> <span class="kw">BY</span> customer_names, product_name</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">ORDER</span> <span class="kw">BY</span> Total_Sales <span class="kw">DESC</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LIMIT</span> <span class="dv">5</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="gioxhgbzes" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#gioxhgbzes) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#gioxhgbzes) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#gioxhgbzes) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#gioxhgbzes) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#gioxhgbzes) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#gioxhgbzes) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#gioxhgbzes) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6E6E;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#gioxhgbzes) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#gioxhgbzes) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#gioxhgbzes) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#gioxhgbzes) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#gioxhgbzes) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#gioxhgbzes) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#gioxhgbzes) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#gioxhgbzes) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#gioxhgbzes) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#gioxhgbzes) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#gioxhgbzes) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#gioxhgbzes) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#gioxhgbzes) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#gioxhgbzes) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#gioxhgbzes) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#gioxhgbzes) .gt_left {
+  text-align: left;
+}
+
+:where(#gioxhgbzes) .gt_center {
+  text-align: center;
+}
+
+:where(#gioxhgbzes) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#gioxhgbzes) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#gioxhgbzes) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#gioxhgbzes) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#gioxhgbzes) .gt_super {
+  font-size: 65%;
+}
+
+:where(#gioxhgbzes) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#gioxhgbzes) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#gioxhgbzes) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#gioxhgbzes) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#gioxhgbzes) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#gioxhgbzes) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#gioxhgbzes) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Customer Names</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col">Product Name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col">Total Sales</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: bold;">Eminence Corp</td>
+<td class="gt_row gt_left" style="background-color: rgba(247,247,247,0.8); font-weight: bold;">Wardrobes</td>
+<td class="gt_row gt_right" style="background-color: rgba(247,247,247,0.8); font-weight: bold;">158,414.80</td></tr>
+    <tr><td class="gt_row gt_left">Trigen</td>
+<td class="gt_row gt_left">Collectibles</td>
+<td class="gt_row gt_right">155,245.70</td></tr>
+    <tr><td class="gt_row gt_left">Niconovum Corp</td>
+<td class="gt_row gt_left">Bathroom Furniture</td>
+<td class="gt_row gt_right">144,385.00</td></tr>
+    <tr><td class="gt_row gt_left">Medline</td>
+<td class="gt_row gt_left">Floral</td>
+<td class="gt_row gt_right">144,023.20</td></tr>
+    <tr><td class="gt_row gt_left">E. Ltd</td>
+<td class="gt_row gt_left">Wall Frames</td>
+<td class="gt_row gt_right">140,679.90</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<p>Customer <code>Eminence Corp</code> on the <code>Wardrobes</code> product.</p>
+<p><br></p>
+<h3 class="insight-text anchored">
+Insight
+</h3>
+<p class="insight-summary">
+All customers have made 630 and above product order within the selected period and the top customer based on number of order, sales and profit is <code>Medline</code> while highest profit made on an average can from <code>Trigen</code>.
+</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./product.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">2. Product Summary</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./sales_channel.html" class="pagination-link">
+        <span class="nav-page-text">4. Method Of Product Sales</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Ayomide Akinwande. October, 2022</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

@@ -1,0 +1,20 @@
+{
+  "index.qmd": {
+    "index.html": "4be2399d"
+  },
+  "about.qmd": {
+    "about.html": "54972da4"
+  },
+  "product.qmd": {
+    "product.html": "fb00dad1"
+  },
+  "customer.qmd": {
+    "customer.html": "5c40dfe4"
+  },
+  "sales_channel.qmd": {
+    "sales_channel.html": "87e6695e"
+  },
+  "location.qmd": {
+    "location.html": "3041d9a3"
+  }
+}
